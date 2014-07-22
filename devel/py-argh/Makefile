@@ -1,0 +1,19 @@
+# $FreeBSD: head/devel/py-argh/Makefile 361842 2014-07-15 00:13:50Z nivit $
+
+PORTNAME=	argh
+PORTVERSION=	0.25.0
+PORTREVISION=	0
+CATEGORIES=	devel
+MASTER_SITES=	CHEESESHOP
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+
+MAINTAINER=	nivit@FreeBSD.org
+COMMENT=	Simple (Python) argparse wrapper
+
+LICENSE=	LGPL3
+
+USE_PYTHON=	yes
+USE_PYDISTUTILS=	yes
+PYDISTUTILS_AUTOPLIST=	yes
+
+.include <bsd.port.mk>
