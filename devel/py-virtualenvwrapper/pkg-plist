@@ -48,8 +48,6 @@
 %%PORTDOCS%%%%DOCSDIR%%/search.html
 %%PORTDOCS%%%%DOCSDIR%%/searchindex.js
 %%PORTDOCS%%%%DOCSDIR%%/tips.html
-@dirrmtry %%PYTHON_SITELIBDIR%%/virtualenvwrapper
-@dirrmtry %%PYTHON_SITELIBDIR%%/virtualenvwrapper-4.3.1-py2.7.egg-info
 %%PORTDOCS%%@dirrmtry %%DOCSDIR%%/_sources
 %%PORTDOCS%%@dirrmtry %%DOCSDIR%%/_static
 %%PORTDOCS%%@dirrmtry %%DOCSDIR%%
