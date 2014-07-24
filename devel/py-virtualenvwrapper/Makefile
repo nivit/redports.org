@@ -2,7 +2,7 @@
 # $FreeBSD: head/devel/py-virtualenvwrapper/Makefile 343611 2014-02-10 09:40:54Z koobs $
 
 PORTNAME=	virtualenvwrapper
-PORTVERSION=	4.2
+PORTVERSION=	4.3.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
