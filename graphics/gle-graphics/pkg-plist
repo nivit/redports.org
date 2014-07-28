@@ -1,6 +1,8 @@
-bin/gle
-bin/glebtool
-bin/manip
+%%QT_BINDIR%%/gle
+%%QT_BINDIR%%/glebtool
+%%QT_BINDIR%%/manip
+%%QT_BINDIR%%/qgle
+lib/libgle-graphics-4.2.4c.so
 libdata/pkgconfig/gle-graphics.pc
 man/man1/gle.1.gz
 %%DATADIR%%/4.2.4c/font/arial8.fmt
