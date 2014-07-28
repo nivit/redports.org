@@ -5,11 +5,13 @@ PORTNAME=	gle-graphics
 DISTVERSION=	4.2.4cf
 PORTREVISION=	0
 CATEGORIES=	graphics print
-MASTER_SITES=	SF/glx/gle4%20%28Current%20Active%20Version%29/${DISTVERSION}
+MASTER_SITES=	SF/glx/gle4%20%28Current%20Active%20Version%29/${DISTVERSION:C,.$,,1}
 DISTNAME=	${PORTNAME}-${DISTVERSION}-src
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Graphics language that produces images from script files
+
+BUILD_DEPENDS=	qmake-qt4:${PORTSDIR}/devel/qmake4
 
 LICENSE=	BSD3CLAUSE GPLv2
 LICENSE_COMB=	multi
