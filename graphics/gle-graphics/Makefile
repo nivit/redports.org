@@ -11,10 +11,10 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}-src
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Graphics language that produces images from script files
 
-BUILD_DEPENDS=	qmake-qt4:${PORTSDIR}/devel/qmake4
-
 LICENSE=	BSD3CLAUSE GPLv2
 LICENSE_COMB=	multi
+
+BUILD_DEPENDS=	qmake-qt4:${PORTSDIR}/devel/qmake4
 
 BITMAP_IMAGES_CONFIGURE_WITH=	jpeg=${LOCALBASE} tiff=${LOCALBASE} png=${LOCALBASE}
 BITMAP_IMAGES_DESC=	Support for including bitmap images
