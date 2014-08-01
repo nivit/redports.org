@@ -2,7 +2,7 @@
 # $FreeBSD: head/www/google-appengine/Makefile 361323 2014-07-09 00:27:06Z nivit $
 
 PORTNAME=	google-appengine
-PORTVERSION=	1.9.6
+PORTVERSION=	1.9.8
 PORTREVISION=	0
 CATEGORIES=	www devel python
 MASTER_SITES=	https://storage.googleapis.com/appengine-sdks/featured/
