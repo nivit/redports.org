@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# $FreeBSD: head/graphics/uDrawGraph/files/uDrawGraph.in 340872 2014-01-24 00:14:07Z mat $
-#
-export UDG_HOME=%%DATADIR%%
-cd %%DATADIR%%
-%%DATADIR%%/bin/uDrawGraph $@
