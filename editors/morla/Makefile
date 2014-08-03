@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/editors/morla/Makefile 350678 2014-04-09 10:29:48Z bapt $
+# $FreeBSD: head/editors/morla/Makefile 363367 2014-07-29 17:50:19Z amdmi3 $
 
 PORTNAME=	morla
 PORTVERSION=	0.16.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	editors textproc
 MASTER_SITES=	http://www.morlardf.net/src/ \
 		http://nivi.interfree.it/distfiles/${PORTNAME}/${PORTVERSION}/
@@ -25,7 +25,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-gconf=auto
-USES=		gettext pkgconfig
+USES=		gettext pkgconfig libtool
 USE_GNOME=	gconf2 libgtkhtml libxslt
 USE_LDCONFIG=	${PREFIX}/lib/${PORTNAME}
 

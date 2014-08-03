@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/graphics/gle-graphics/Makefile 361727 2014-07-13 23:23:25Z bapt $
+# $FreeBSD: head/graphics/gle-graphics/Makefile 363292 2014-07-29 04:28:52Z nivit $
 
 PORTNAME=	gle-graphics
 DISTVERSION=	4.2.4cf

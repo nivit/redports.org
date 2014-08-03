@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/math/javaview/Makefile 361099 2014-07-07 15:31:01Z olgeni $
+# $FreeBSD: head/math/javaview/Makefile 362717 2014-07-23 17:30:45Z bapt $
 
 PORTNAME=	javaview-lite
 PORTVERSION=	3.95
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.javaview.de/download/data/
 DISTFILES=	javaview.zip jv_models.zip jv_tutor.zip
 DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
 
-MAINTAINER=	nivit@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	3D viewer and a mathematical visualization software
 
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash

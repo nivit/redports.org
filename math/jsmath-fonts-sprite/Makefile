@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/math/jsmath-fonts-sprite/Makefile 361099 2014-07-07 15:31:01Z olgeni $
+# $FreeBSD: head/math/jsmath-fonts-sprite/Makefile 362717 2014-07-23 17:30:45Z bapt $
 
 PORTNAME=	jsMath-fonts-sprite
 PORTVERSION=	1.0
@@ -7,7 +7,7 @@ CATEGORIES=	math www
 MASTER_SITES=	http://www.math.union.edu/~dpvc/jsMath/download/ \
 		http://nivi.interfree.it/distfiles/${PORTNAME}/
 
-MAINTAINER=	nivit@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Sprite fonts pack for jsMath
 
 USES=		zip

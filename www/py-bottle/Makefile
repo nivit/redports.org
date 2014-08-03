@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/py-bottle/Makefile 349691 2014-03-30 22:18:35Z nivit $
+# $FreeBSD: head/www/py-bottle/Makefile 363686 2014-08-01 03:37:05Z nivit $
 
 PORTNAME=	bottle
 PORTVERSION=	0.12.7

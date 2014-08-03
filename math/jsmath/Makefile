@@ -1,12 +1,12 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/math/jsmath/Makefile 352986 2014-05-05 09:45:36Z bapt $
+# $FreeBSD: head/math/jsmath/Makefile 362717 2014-07-23 17:30:45Z bapt $
 
 PORTNAME=	jsMath
 DISTVERSION=	3.6e
 CATEGORIES=	math www
 MASTER_SITES=	SF/${PORTNAME:tl}/${PORTNAME}/${DISTVERSION}
 
-MAINTAINER=	nivit@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	JavaScript tool for including mathematics in web pages
 
 USES=		zip

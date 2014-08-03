@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/math/asymptote/Makefile 355661 2014-05-28 23:32:55Z nivit $
+# $FreeBSD: head/math/asymptote/Makefile 363374 2014-07-29 19:11:51Z adamw $
 
 PORTNAME=	asymptote
 PORTVERSION=	2.32
@@ -8,7 +8,6 @@ CATEGORIES=	math
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}.src
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Powerful script-based vector graphics language
@@ -36,7 +35,7 @@ MAKE_JOBS_UNSAFE=	yes
 
 ONLY_FOR_ARCHS=	i386 amd64
 
-USES=		gmake perl5
+USES=		gmake perl5 tar:tgz
 USE_AUTOTOOLS=	autoconf aclocal
 USE_GHOSTSCRIPT=yes
 USE_GL=	glut
@@ -81,12 +80,6 @@ INSTALL_TARGET+=	install-html
 INFO=	asy-faq
 ALL_TARGET+=	man
 INSTALL_TARGET+=	install-man
-.endif
-
-# Examples
-.if !${PORT_OPTIONS:MEXAMPLES}
-post-install:
-	@${RM} -R ${STAGEDIR}${EXAMPLESDIR}
 .endif
 
 post-patch:

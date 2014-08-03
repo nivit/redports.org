@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-virtualenvwrapper/Makefile 343611 2014-02-10 09:40:54Z koobs $
+# $FreeBSD: head/devel/py-virtualenvwrapper/Makefile 362763 2014-07-24 05:19:40Z nivit $
 
 PORTNAME=	virtualenvwrapper
 PORTVERSION=	4.3.1

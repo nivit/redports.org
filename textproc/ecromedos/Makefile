@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: head/textproc/ecromedos/Makefile 351411 2014-04-16 18:28:47Z zeising $
+# $FreeBSD: head/textproc/ecromedos/Makefile 363904 2014-08-03 14:15:08Z olgeni $
 
 PORTNAME=	ecromedos
 PORTVERSION=	1.0.1
@@ -8,7 +8,7 @@ CATEGORIES=	textproc print www
 MASTER_SITES=	http://www.ecromedos.net/files/${PORTVERSION}/
 
 MAINTAINER=	nivit@FreeBSD.org
-COMMENT=	A document preparation system that allows concurrent publication
+COMMENT=	Document preparation system that allows concurrent publication
 
 RUN_DEPENDS=	convert:${PORTSDIR}/graphics/ImageMagick \
 		${PYTHON_SITELIBDIR}/libxml2.py:${PORTSDIR}/textproc/py-libxml2 \

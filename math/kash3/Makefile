@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: head/math/kash3/Makefile 361099 2014-07-07 15:31:01Z olgeni $
+# $FreeBSD: head/math/kash3/Makefile 363399 2014-07-29 21:43:17Z adamw $
 
 PORTNAME=	kash3
 PORTVERSION=	2008.07.31
@@ -8,7 +8,7 @@ MASTER_SITES=	ftp://ftp.math.tu-berlin.de/pub/algebra/Kant/Kash_3/ \
 		http://nivi.interfree.it/distfiles/${PORTNAME}/
 DISTFILES=	${PORTNAME:tu}-${ELFTYPE}-i686-${PORTVERSION:S|.|-|g}.tar.bz2
 
-MAINTAINER=	nivit@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Computer algebra system for computing in algebraic number fields
 
 RUN_DEPENDS=	curl:${PORTSDIR}/ftp/curl
@@ -22,7 +22,7 @@ OPTLIB_DESC=		Install optional functions library
 
 PLIST_SUB=	OPTLIB=${OPTLIB}
 
-USE_BZIP2=	yes
+USES=	tar:bzip2
 USE_LINUX=	yes
 
 SUB_FILES=	${PORTNAME}

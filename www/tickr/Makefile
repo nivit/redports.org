@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/tickr/Makefile 360228 2014-07-02 17:17:20Z bapt $
+# $FreeBSD: head/www/tickr/Makefile 362604 2014-07-22 23:24:03Z nivit $
 
 PORTNAME=	tickr
 PORTVERSION=	0.6.4

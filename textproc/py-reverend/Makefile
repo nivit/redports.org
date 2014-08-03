@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: head/textproc/py-reverend/Makefile 360140 2014-07-02 06:40:04Z vanilla $
+# $FreeBSD: head/textproc/py-reverend/Makefile 363904 2014-08-03 14:15:08Z olgeni $
 
 PORTNAME=	reverend
 PORTVERSION=	0.3
@@ -9,7 +9,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	Reverend-${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
-COMMENT=	A simple Bayesian classifier written in Python
+COMMENT=	Simple Bayesian classifier written in Python
 
 USE_PYTHON=	yes
 USE_PYDISTUTILS=	yes

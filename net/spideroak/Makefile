@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/net/spideroak/Makefile 362501 2014-07-21 21:46:10Z nivit $
+# $FreeBSD: head/net/spideroak/Makefile 362611 2014-07-23 00:38:27Z nivit $
 
 PORTNAME=	spideroak
 PORTVERSION=	5.1.6
-#PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://nivit.altervista.org/FreeBSD/ports/distfiles/${PORTNAME}/ \
 		https://spideroak.com/getbuild?platform=slackware&arch=i386&dummy=/
@@ -23,7 +23,7 @@ NO_WRKSUBDIR=	yes
 ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	binary distribution
 OPTIONS_DEFINE=	DOCS MANPAGES
-#OPTIONS_DEFAULT=	MANPAGES
+OPTIONS_DEFAULT=	MANPAGES
 OPTIONS_SUB=	yes
 
 PLIST_SUB=	DESKTOPDIR=${DESKTOPDIR:S,${PREFIX}/,,} \

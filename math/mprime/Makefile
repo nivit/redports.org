@@ -1,5 +1,5 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
-# $FreeBSD: head/math/mprime/Makefile 340722 2014-01-22 17:00:46Z mat $
+# $FreeBSD: head/math/mprime/Makefile 362717 2014-07-23 17:30:45Z bapt $
 
 PORTNAME=	mprime
 PORTVERSION=	0.0.${SOURCE_VERSION}
@@ -7,7 +7,7 @@ CATEGORIES=	math benchmarks net
 MASTER_SITES=	ftp://mersenne.org/gimps/
 DISTNAME=	sprime${PORTVERSION:S/^0.0.//:S/.//}-freebsd
 
-MAINTAINER=	nivit@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	mersenne.org distributed Great Internet Mersenne Prime Search
 
 ONLY_FOR_ARCHS=	i386

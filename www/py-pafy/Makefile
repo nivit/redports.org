@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/py-pafy/Makefile 361731 2014-07-14 03:19:43Z nivit $
+# $FreeBSD: head/www/py-pafy/Makefile 362934 2014-07-25 21:40:24Z nivit $
 
 PORTNAME=	pafy
 PORTVERSION=	0.3.58

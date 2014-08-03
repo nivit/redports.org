@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: head/textproc/textogif/Makefile 348705 2014-03-20 15:44:13Z ehaupt $
+# $FreeBSD: head/textproc/textogif/Makefile 363904 2014-08-03 14:15:08Z olgeni $
 
 PORTNAME=	textogif
 PORTVERSION=	1.1
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www.fourmilab.ch/webtools/textogif/download/ \
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
-COMMENT=	A Perl script to convert LaTeX formulas into GIFs
+COMMENT=	Perl script to convert LaTeX formulas into GIFs
 
 RUN_DEPENDS=	ppmtogif:${PORTSDIR}/graphics/netpbm
 

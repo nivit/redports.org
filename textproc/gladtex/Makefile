@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/textproc/gladtex/Makefile 341453 2014-01-27 21:17:25Z mat $
+# $FreeBSD: head/textproc/gladtex/Makefile 363904 2014-08-03 14:15:08Z olgeni $
 
 PORTNAME=	gladtex
 PORTVERSION=	1.3
@@ -9,7 +9,7 @@ MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	nivit@FreeBSD.org
-COMMENT=	A program to replace LaTeX formulas in HTML files with images
+COMMENT=	Program to replace LaTeX formulas in HTML files with images
 
 LICENSE=	GPLv2
 

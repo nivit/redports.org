@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: head/graphics/uDrawGraph/Makefile 361728 2014-07-13 23:36:40Z bapt $
+# $FreeBSD: head/graphics/uDrawGraph/Makefile 362712 2014-07-23 17:07:12Z bapt $
 
 PORTNAME=	uDrawGraph
 PORTVERSION=	3.1.1
@@ -8,7 +8,7 @@ CATEGORIES=	graphics math
 MASTER_SITES=	http://www.informatik.uni-bremen.de/uDrawGraph/download/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-${PKGNUM}-${OPSYS:tl}-${ARCH}
 
-MAINTAINER=	nivit@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Graph drawing/visualization system
 
 LIB_DEPENDS=	libc.so.4:${PORTSDIR}/misc/compat4x
