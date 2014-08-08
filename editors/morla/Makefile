@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/editors/morla/Makefile 363367 2014-07-29 17:50:19Z amdmi3 $
+# $FreeBSD: head/editors/morla/Makefile 364112 2014-08-05 14:56:15Z amdmi3 $
 
 PORTNAME=	morla
 PORTVERSION=	0.16.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	editors textproc
 MASTER_SITES=	http://www.morlardf.net/src/ \
 		http://nivi.interfree.it/distfiles/${PORTNAME}/${PORTVERSION}/

@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/py-pyquery/Makefile 350754 2014-04-10 01:53:31Z nivit $
+# $FreeBSD: head/www/py-pyquery/Makefile 364158 2014-08-06 09:11:57Z olgeni $
 
 PORTNAME=	pyquery
 PORTVERSION=	1.2.8
@@ -8,7 +8,7 @@ MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
-COMMENT=	A jquery-like library for python
+COMMENT=	Jquery-like library for python
 
 LICENSE=	BSD3CLAUSE
 

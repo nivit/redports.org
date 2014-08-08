@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/pyjamas/Makefile 362026 2014-07-16 03:34:56Z adamw $
+# $FreeBSD: head/www/pyjamas/Makefile 364158 2014-08-06 09:11:57Z olgeni $
 
 PORTNAME=	pyjamas
 PORTVERSION=	0.5
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}/OldFiles
 DISTNAME=	Pyjamas-${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
-COMMENT=	A port of Google Web Toolkit to Python
+COMMENT=	Port of Google Web Toolkit to Python
 
 USE_PYTHON=	yes
 # install/require some libraries in sys.prefix

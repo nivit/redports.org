@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/www/mimetex/Makefile 360213 2014-07-02 15:55:13Z vanilla $
+# $FreeBSD: head/www/mimetex/Makefile 364158 2014-08-06 09:11:57Z olgeni $
 
 PORTNAME=	mimetex
 PORTVERSION=	20120331.1.74
@@ -10,7 +10,7 @@ DISTNAME=	${PORTNAME}
 DIST_SUBDIR=	${PORTNAME}/${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
-COMMENT=	A CGI script that lets you embed LaTeX math in your HTML pages
+COMMENT=	CGI script that lets you embed LaTeX math in your HTML pages
 
 LICENSE=	GPLv3
 

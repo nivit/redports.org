@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@users.sourceforge.net>
-# $FreeBSD: head/audio/ufmcontrol-i18n/Makefile 362014 2014-07-15 23:11:12Z adamw $
+# $FreeBSD: head/audio/ufmcontrol-i18n/Makefile 364227 2014-08-06 22:18:29Z nivit $
 
 PORTNAME=		ufmcontrol-i18n
 PORTVERSION=		0.3.5
