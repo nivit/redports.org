@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: head/x11-toolkits/py-wax/Makefile 360123 2014-07-02 01:29:19Z vanilla $
+# $FreeBSD: head/x11-toolkits/py-wax/Makefile 364347 2014-08-08 08:42:44Z olgeni $
 
 PORTNAME=	wax
 PORTVERSION=	0.3.33
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/${PORTNAME}gui/${PORTNAME}gui/${PORTNAME}-${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
-COMMENT=	A user-friendly layer on top of wxPython
+COMMENT=	User-friendly layer on top of wxPython
 
 NO_BUILD=	yes
 USE_PYTHON=	yes

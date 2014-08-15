@@ -1,16 +1,16 @@
 # Created by: nivit@users.sourceforge.net
-# $FreeBSD: head/x11-toolkits/tkshape/Makefile 339211 2014-01-09 08:59:44Z gahr $
+# $FreeBSD: head/x11-toolkits/tkshape/Makefile 364347 2014-08-08 08:42:44Z olgeni $
 
 PORTNAME=		tkshape
 PORTVERSION=		0.4
-PORTREVISION=	2
+PORTREVISION=		2
 CATEGORIES=		x11-toolkits
 MASTER_SITES=		http://www.cs.man.ac.uk/~fellowsd/tcl/ \
 			http://nivi.interfree.it/distfiles/${PORTNAME}/${PORTVERSION}/
 DISTNAME=		shape${PORTVERSION:S/.//g}
 
 MAINTAINER=		nivit@FreeBSD.org
-COMMENT=		A Tk library to access to X Shaped Window Extension
+COMMENT=		Tk library to access to X Shaped Window Extension
 
 USES=			gmake tk:85+
 

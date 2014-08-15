@@ -1,5 +1,5 @@
 # Created by: Dryice Dong Liu <dryice@dryice.name>
-# $FreeBSD: head/databases/py-sqlalchemy-devel/Makefile 346878 2014-03-03 10:42:55Z rm $
+# $FreeBSD: head/databases/py-sqlalchemy-devel/Makefile 364559 2014-08-10 19:03:50Z antoine $
 
 PORTNAME=	sqlalchemy
 PORTVERSION=	0.8.2
@@ -85,7 +85,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${STAGEDIR}${DOCSDIR}
 .endfor
 .for i in ${AL_PORTDOCS_SUBDIR}
-	@${MKDIR} ${DOCSDIR}/${i}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}/${i}
 	(cd ${WRKSRC}/doc/${i} && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}/${i})
 .endfor
 
