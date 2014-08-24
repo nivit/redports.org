@@ -14,8 +14,10 @@ LICENSE_NAME=	Beerware
 LICENSE_TEXT=	http://www.sax.de/~joerg/beerware-license.txt
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
+BUILD_DEPENDS=	gawk:${PORTSDIR}/lang/gawk
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 		gawk:${PORTSDIR}/lang/gawk
+TEST_DEPENDS=	gawk:${PORTSDIR}/lang/gawk
 
 ALL_TARGET=	build
 
