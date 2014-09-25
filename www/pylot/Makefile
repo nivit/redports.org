@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/pylot/Makefile 354009 2014-05-13 23:36:37Z gerald $
+# $FreeBSD: head/www/pylot/Makefile 367888 2014-09-10 20:50:31Z gerald $
 
 PORTNAME=	pylot
 PORTVERSION=	1.26
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 DISTNAME=	${PORTNAME}_${PORTVERSION}

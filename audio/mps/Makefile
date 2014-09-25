@@ -1,9 +1,10 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/audio/mps/Makefile 364073 2014-08-05 05:29:29Z nivit $
+# $FreeBSD: head/audio/mps/Makefile 367888 2014-09-10 20:50:31Z gerald $
 
 PORTNAME=	mps
 PORTVERSION=	0.20.16
 #PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	CHEESESHOP
 

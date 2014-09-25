@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/graphics/gle-graphics/Makefile 363292 2014-07-29 04:28:52Z nivit $
+# $FreeBSD: head/graphics/gle-graphics/Makefile 367888 2014-09-10 20:50:31Z gerald $
 
 PORTNAME=	gle-graphics
 DISTVERSION=	4.2.4cf
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	graphics print
 MASTER_SITES=	SF/glx/gle4%20%28Current%20Active%20Version%29/${DISTVERSION:C,.$,,1}
 DISTNAME=	${PORTNAME}-${DISTVERSION}-src

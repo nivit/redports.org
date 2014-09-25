@@ -1,5 +1,5 @@
 # Created by: Dryice Dong Liu <dryice@dryice.name>
-# $FreeBSD: head/databases/py-sqlalchemy-devel/Makefile 364559 2014-08-10 19:03:50Z antoine $
+# $FreeBSD: head/databases/py-sqlalchemy-devel/Makefile 367489 2014-09-07 07:00:41Z antoine $
 
 PORTNAME=	sqlalchemy
 PORTVERSION=	0.8.2
@@ -27,7 +27,7 @@ PY2TO3_ARGS=		--no-diffs --nobackups --verbose --write
 
 OPTIONS_DEFINE=		DOCS EXAMPLES TESTS
 OPTIONS_MULTI=		BACKEND
-OPTIONS_MULTI_BACKEND=	FIREBIRD MSSQL MYSQL PGSQL SQLITE SYBASE
+OPTIONS_MULTI_BACKEND=	MSSQL MYSQL PGSQL SQLITE SYBASE
 OPTIONS_DEFAULT=	SQLITE
 
 SYBASE_DESC=	Sybase backend
@@ -36,7 +36,6 @@ TESTS_DESC=	Include nose for unit tests
 # bypass infrastructure bug
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
-FIREBIRD_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}kinterbasdb>0:${PORTSDIR}/databases/kinterbasdb
 MSSQL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mssql>0:${PORTSDIR}/databases/py-mssql
 PGSQL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psycopg2>=2.0.8:${PORTSDIR}/databases/py-psycopg2
 SQLITE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3

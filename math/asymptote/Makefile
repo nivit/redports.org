@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/math/asymptote/Makefile 365182 2014-08-17 13:09:56Z tijl $
+# $FreeBSD: head/math/asymptote/Makefile 367888 2014-09-10 20:50:31Z gerald $
 
 PORTNAME=	asymptote
 PORTVERSION=	2.32
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTVERSION}
@@ -41,7 +41,7 @@ USE_GHOSTSCRIPT=yes
 USE_GL=	glut
 USE_PERL5=	build
 USE_PYTHON=	yes
-USE_TEX=	dvipsk formats texlive
+USE_TEX=	dvipsk formats
 
 WRKSRC=	${WRKDIR}/${PORTNAME}-${PORTVERSION}
 

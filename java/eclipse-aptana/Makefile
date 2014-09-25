@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale	<nivit@FreeBSD.org>
-# $FreeBSD: head/java/eclipse-aptana/Makefile 347771 2014-03-10 15:21:21Z bapt $
+# $FreeBSD: head/java/eclipse-aptana/Makefile 367888 2014-09-10 20:50:31Z gerald $
 
 PORTNAME=	aptana
 PORTVERSION=	1.2.2.024747
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	java devel
 MASTER_SITES=	http://update1.aptana.org/studio/3.2/024747/

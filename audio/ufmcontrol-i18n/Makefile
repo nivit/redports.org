@@ -2,7 +2,7 @@
 # $FreeBSD: head/audio/ufmcontrol-i18n/Makefile 364227 2014-08-06 22:18:29Z nivit $
 
 PORTNAME=		ufmcontrol-i18n
-PORTVERSION=		0.3.6
+PORTVERSION=		0.3.5
 CATEGORIES=		audio
 MASTER_SITES=		SF/ufmcontrol/${PORTNAME}/${PORTVERSION}
 

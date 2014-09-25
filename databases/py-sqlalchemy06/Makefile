@@ -1,5 +1,5 @@
 # Created by: Dryice Dong Liu <dryice@dryice.name>
-# $FreeBSD: head/databases/py-sqlalchemy06/Makefile 358768 2014-06-22 08:32:57Z mva $
+# $FreeBSD: head/databases/py-sqlalchemy06/Makefile 367489 2014-09-07 07:00:41Z antoine $
 
 PORTNAME=	sqlalchemy06
 PORTVERSION=	0.6.9
@@ -25,12 +25,11 @@ OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 OPTIONS_DEFINE=	CEXTENSIONS DOCS EXAMPLES NOSE
 
 OPTIONS_MULTI=	BACKEND
-OPTIONS_MULTI_BACKEND=	FIREBIRD MSSQL MYSQL PGSQL SQLITE SYBASE
+OPTIONS_MULTI_BACKEND=	MSSQL MYSQL PGSQL SQLITE SYBASE
 
 OPTIONS_DEFAULT=	MYSQL PGSQL SQLITE
 
 CEXTENSIONS_DESC=	C extension to speed up the SQL layer
-FIREBIRD_DESC=	FireBird backend
 MSSQL_DESC=	MS SQL Server backend
 NOSE_DESC=	Use Nose for unit tests
 SYBASE_DESC=	Sybase backend
@@ -51,10 +50,6 @@ PLIST_SUB+=	SPEEDUPS="@comment "
 .if ${PORT_OPTIONS:MDOCS}
 AL_PORTDOCS=	*.html *.js
 AL_PORTDOCS_SUBDIR=	core dialects orm
-.endif
-
-.if ${PORT_OPTIONS:MFIREBIRD}
-RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/kinterbasdb/__init__.py:${PORTSDIR}/databases/kinterbasdb
 .endif
 
 .if ${PORT_OPTIONS:MMSSQL}

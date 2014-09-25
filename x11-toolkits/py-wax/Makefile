@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: head/x11-toolkits/py-wax/Makefile 364347 2014-08-08 08:42:44Z olgeni $
+# $FreeBSD: head/x11-toolkits/py-wax/Makefile 367888 2014-09-10 20:50:31Z gerald $
 
 PORTNAME=	wax
 PORTVERSION=	0.3.33
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11-toolkits devel python
 MASTER_SITES=	SF/${PORTNAME}gui/${PORTNAME}gui/${PORTNAME}-${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}

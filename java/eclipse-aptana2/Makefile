@@ -1,9 +1,10 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/java/eclipse-aptana2/Makefile 347771 2014-03-10 15:21:21Z bapt $
+# $FreeBSD: head/java/eclipse-aptana2/Makefile 367888 2014-09-10 20:50:31Z gerald $
 
 PORTNAME=	aptana
 PORTVERSION=	2.0.5.1278522500
 #PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	java devel
 MASTER_SITES=	http://nivi.interfree.it/distfiles/eclipse-aptana2/
 PKGNAMEPREFIX=	eclipse-

@@ -1,5 +1,5 @@
 # Created by: Dryice Dong Liu <dryice@dryice.name>
-# $FreeBSD: head/databases/py-sqlalchemy/Makefile 358461 2014-06-19 19:39:28Z mva $
+# $FreeBSD: head/databases/py-sqlalchemy/Makefile 367489 2014-09-07 07:00:41Z antoine $
 
 PORTNAME=	sqlalchemy
 PORTVERSION=	0.7.10
@@ -26,10 +26,9 @@ PY2TO3_ARGS=		--no-diffs --nobackups --verbose --write
 
 OPTIONS_DEFINE=		DOCS EXAMPLES TESTS
 OPTIONS_MULTI=		BACKEND
-OPTIONS_MULTI_BACKEND=	FIREBIRD MSSQL MYSQL PGSQL SQLITE SYBASE
+OPTIONS_MULTI_BACKEND=	MSSQL MYSQL PGSQL SQLITE SYBASE
 OPTIONS_DEFAULT=	SQLITE
 
-FIREBIRD_DESC=	Firebird backend
 MSSQL_DESC=	MS SQL Server backend
 TESTS_DESC=	Include nose for unit tests
 SYBASE_DESC=	Sybase backend
@@ -47,10 +46,6 @@ EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 .if ${PORT_OPTIONS:MDOCS}
 AL_PORTDOCS=	*.html *.js
 AL_PORTDOCS_SUBDIR=	core dialects orm
-.endif
-
-.if ${PORT_OPTIONS:MFIREBIRD}
-RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/kinterbasdb/__init__.py:${PORTSDIR}/databases/kinterbasdb
 .endif
 
 .if ${PORT_OPTIONS:MMSSQL}

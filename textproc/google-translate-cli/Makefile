@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/textproc/google-translate-cli/Makefile 365908 2014-08-24 09:33:50Z antoine $
+# $FreeBSD: head/textproc/google-translate-cli/Makefile 366021 2014-08-24 22:36:16Z nivit $
 
 PORTNAME=	google-translate-cli
 PORTVERSION=	0.8.19

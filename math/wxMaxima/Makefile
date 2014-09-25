@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/math/wxMaxima/Makefile 361595 2014-07-12 02:05:07Z nivit $
+# $FreeBSD: head/math/wxMaxima/Makefile 367888 2014-09-10 20:50:31Z gerald $
 
 PORTNAME=	wxMaxima
 PORTVERSION=	13.04.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME:tl}/${PORTNAME}/${PORTVERSION}
