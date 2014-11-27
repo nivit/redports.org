@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale
-# $FreeBSD: head/devel/py-protocols/Makefile 345007 2014-02-19 06:53:00Z miwi $
+# $FreeBSD: head/devel/py-protocols/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	protocols
 PORTVERSION=	0.9.3
@@ -13,9 +13,8 @@ DISTNAME=	PyProtocols-${PORTVERSION}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Python module extending the PEP 246 adapt() function
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 post-patch:
 	@${RM} -rf ${WRKSRC}/setuptools

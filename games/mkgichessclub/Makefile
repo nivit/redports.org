@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@FreeBSD.org>
-# $FreeBSD: head/games/mkgichessclub/Makefile 362015 2014-07-15 23:30:05Z adamw $
+# $FreeBSD: head/games/mkgichessclub/Makefile 371287 2014-10-20 17:36:02Z mva $
 
 PORTNAME=	mkgichessclub
 PORTVERSION=	2.2.0
@@ -21,9 +21,9 @@ NO_BUILD=	yes
 
 SUB_FILES=	pkg-message
 
+USES=		python
 USE_MYSQL=	server
 USE_PHP=	mysql pcre session
-USE_PYTHON=	yes
 GNUCHESS_RUN_DEPENDS=	gnuchess:${PORTSDIR}/games/gnuchess
 PHALANX_RUN_DEPENDS=	phalanx:${PORTSDIR}/games/phalanx
 

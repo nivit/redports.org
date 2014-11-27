@@ -1,5 +1,5 @@
 # Created by: Dryice Dong Liu <dryice@dryice.name>
-# $FreeBSD: head/databases/py-sqlalchemy-devel/Makefile 367489 2014-09-07 07:00:41Z antoine $
+# $FreeBSD: head/databases/py-sqlalchemy-devel/Makefile 371173 2014-10-19 08:50:17Z mva $
 
 PORTNAME=	sqlalchemy
 PORTVERSION=	0.8.2
@@ -18,9 +18,8 @@ LICENSE=	MIT
 TEST_DEPENDS:=	${RUN_DEPENDS} \
 		${PYTHON_PKGNAMEPREFIX}nose>0:${PORTSDIR}/devel/py-nose
 
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 PY2TO3_CMD=		${LOCALBASE}/bin/2to3-${PYTHON_VER}
 PY2TO3_ARGS=		--no-diffs --nobackups --verbose --write

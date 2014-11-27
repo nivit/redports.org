@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-ScriptTest/Makefile 347207 2014-03-06 14:07:46Z miwi $
+# $FreeBSD: head/devel/py-ScriptTest/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	ScriptTest
 PORTVERSION=	1.2
@@ -13,8 +13,7 @@ COMMENT=	Helper to test command-line scripts
 
 LICENSE=	MIT
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

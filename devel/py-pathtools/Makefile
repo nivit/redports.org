@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/py-pathtools/Makefile 351249 2014-04-14 04:49:58Z nivit $
+# $FreeBSD: head/devel/py-pathtools/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	pathtools
 PORTVERSION=	0.1.2
@@ -14,10 +14,8 @@ LICENSE=	MIT
 
 OPTIONS_DEFINE=	DOCS
 
-PYDISTUTILS_AUTOPLIST=	yes
-
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.options.mk>
 

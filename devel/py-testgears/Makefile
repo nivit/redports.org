@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: head/devel/py-testgears/Makefile 345012 2014-02-19 08:07:35Z miwi $
+# $FreeBSD: head/devel/py-testgears/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	TestGears
 PORTVERSION=	0.2
@@ -12,8 +12,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Python module to run tests written as simple functions
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

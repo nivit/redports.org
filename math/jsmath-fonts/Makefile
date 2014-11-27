@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/math/jsmath-fonts/Makefile 361099 2014-07-07 15:31:01Z olgeni $
+# $FreeBSD: head/math/jsmath-fonts/Makefile 372485 2014-11-12 09:10:23Z antoine $
 
 PORTNAME=	jsMath-fonts
 PORTVERSION=	1.3
@@ -25,7 +25,6 @@ PLIST_SUB+=	Dcmp=${WWWDIR_REL}/fonts/cm-fonts/plain
 do-install:
 	@${INSTALL} -d ${STAGEDIR}${WWWDIR}/fonts
 	@${CP} -Rp ${WRKSRC}/fonts/ ${STAGEDIR}${WWWDIR}/fonts/
-	@${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${STAGEDIR}${WWWDIR}/fonts/
 	@${CHMOD} -R go-w ${STAGEDIR}${WWWDIR}/fonts/
 
 .include <bsd.port.mk>

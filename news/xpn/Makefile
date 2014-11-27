@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/news/xpn/Makefile 362023 2014-07-16 03:00:46Z adamw $
+# $FreeBSD: head/news/xpn/Makefile 371452 2014-10-24 16:42:59Z mva $
 
 PORTNAME=	xpn
 PORTVERSION=	1.2.6
@@ -15,15 +15,13 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gtk/__init__.py:${PORTSDIR}/x11-toolki
 
 NO_BUILD=	yes
 
-USE_PYTHON=	yes
-
 FIND_DIRS=	-type d
 FIND_DATA=	-type f -mindepth 2 -not -name "*~"
 
 SUB_FILES=	${PORTNAME}
 SUB_LIST=	PYTHON_CMD=${PYTHON_CMD} XPN=${XPN}
 
-USES=		gettext
+USES=		gettext python
 
 XPN=	${PORTNAME}.py
 

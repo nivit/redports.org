@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-virtualenvwrapper/Makefile 362763 2014-07-24 05:19:40Z nivit $
+# $FreeBSD: head/devel/py-virtualenvwrapper/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	virtualenvwrapper
 PORTVERSION=	4.3.1
@@ -22,9 +22,8 @@ OPTIONS_DEFINE=	DOCS
 DOCS_BUILD_DEPENDS=	sphinx-build:${PORTSDIR}/textproc/py-sphinx \
 			${PYTHON_PKGNAMEPREFIX}sphinxcontrib-bitbucket>=1.0:${PORTSDIR}/textproc/py-sphinxcontrib-bitbucket
 
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.pre.mk>
 

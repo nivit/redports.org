@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/java/eclipse-pydev/Makefile 367888 2014-09-10 20:50:31Z gerald $
+# $FreeBSD: head/java/eclipse-pydev/Makefile 371202 2014-10-19 17:45:13Z mva $
 
 PORTNAME=	pydev
 PORTVERSION=	3.5.0
@@ -27,8 +27,7 @@ OPTIONS_DEFINE=	JYTHON
 PLUGINDIR=	share/eclipse/dropins/pydev/eclipse/plugins
 PYDEV_BUNDLES_INFO=	${PREFIX}/${PLUGINDIR}/bundles.info
 
-USE_PYTHON=	yes
-USES=		zip
+USES=		python zip
 
 .include <bsd.port.options.mk>
 

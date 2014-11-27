@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/devel/py-turbojson/Makefile 344661 2014-02-17 05:47:10Z miwi $
+# $FreeBSD: head/devel/py-turbojson/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	TurboJson
 PORTVERSION=	1.3.2
@@ -20,8 +20,7 @@ BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}simplejson>=1.9.1:${PORTSDIR}/devel/py-sim
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}simplejson>=1.9.1:${PORTSDIR}/devel/py-simplejson \
 		${PYTHON_PKGNAMEPREFIX}PEAK-Rules>=0:${PORTSDIR}/devel/py-PEAK-Rules
 
-USE_PYTHON=	2
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python:2
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

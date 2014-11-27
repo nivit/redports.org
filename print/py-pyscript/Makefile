@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: head/print/py-pyscript/Makefile 362023 2014-07-16 03:00:46Z adamw $
+# $FreeBSD: head/print/py-pyscript/Makefile 371452 2014-10-24 16:42:59Z mva $
 
 PORTNAME=	pyscript
 PORTVERSION=	0.6.1
@@ -17,8 +17,8 @@ OPTIONS_DEFINE=	DOCS EXAMPLES
 
 PYSCRIPT_MANUAL=doc/manual/pyscript.pdf
 
-USE_PYDISTUTILS=yes
-USE_PYTHON=	yes
+USES=		python
+USE_PYTHON=	distutils
 USE_TEX=	latex dvipsk
 
 .include <bsd.port.options.mk>

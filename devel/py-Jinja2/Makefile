@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-Jinja2/Makefile 357397 2014-06-10 22:19:23Z nivit $
+# $FreeBSD: head/devel/py-Jinja2/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	Jinja2
 PORTVERSION=	2.7.3
@@ -17,10 +17,9 @@ LICENSE=	BSD3CLAUSE
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}MarkupSafe>=0.18:${PORTSDIR}/textproc/py-MarkupSafe
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}MarkupSafe>=0.18:${PORTSDIR}/textproc/py-MarkupSafe
 
-USE_PYTHON=		yes
+USES=		python
 .if empty(PKGNAMESUFFIX)
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USE_PYTHON=	distutils autoplist
 .endif
 
 EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}

@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/audio/sonata/Makefile 368446 2014-09-18 12:31:24Z mat $
+# $FreeBSD: head/audio/sonata/Makefile 371170 2014-10-19 07:33:09Z mva $
 
 PORTNAME=	sonata
 PORTVERSION=	1.6.2.1
@@ -14,11 +14,9 @@ LICENSE=	GPLv3
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpd>=0.2.0:${PORTSDIR}/audio/py-mpd
 
-USES=		gettext pkgconfig
+USES=		gettext pkgconfig python
 USE_GNOME=	pygtk2
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USE_PYTHON=	distutils autoplist
 
 OPTIONS_DEFINE=	DOCS MANPAGES MMKEYS MPD PYGNOMEEXTRAS TAGLIB ZSI
 OPTIONS_DEFAULT=	MPD

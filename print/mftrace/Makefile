@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/print/mftrace/Makefile 365343 2014-08-18 19:13:18Z antoine $
+# $FreeBSD: head/print/mftrace/Makefile 371452 2014-10-24 16:42:59Z mva $
 
 PORTNAME=	mftrace
 PORTVERSION=	1.2.18
@@ -23,10 +23,9 @@ RUN_DEPENDS+=	potrace:${PORTSDIR}/graphics/potrace
 .endif
 
 # Python3 ready
-USE_PYTHON=	yes
 USE_TEX=	base texmf
 GNU_CONFIGURE=	yes
-USES=		gmake
+USES=		gmake python
 MAKEFILE=	GNUmakefile
 
 

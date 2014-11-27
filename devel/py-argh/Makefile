@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/py-argh/Makefile 361842 2014-07-15 00:13:50Z nivit $
+# $FreeBSD: head/devel/py-argh/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	argh
 PORTVERSION=	0.25.0
@@ -12,8 +12,7 @@ COMMENT=	Simple (Python) argparse wrapper
 
 LICENSE=	LGPL3
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

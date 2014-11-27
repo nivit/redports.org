@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-pip/Makefile 354477 2014-05-19 01:03:17Z nivit $
+# $FreeBSD: head/devel/py-pip/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	pip
 PORTVERSION=	1.5.6
@@ -19,11 +19,9 @@ GH_COMMIT=	437fb31
 
 OPTIONS_DEFINE=	DOCS
 
-USES=		shebangfix
+USES=		python shebangfix
 USE_GITHUB=	yes
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USE_PYTHON=	distutils autoplist
 
 # This port installs the following file in shared dirs
 # PLIST_FILES= bin/pip

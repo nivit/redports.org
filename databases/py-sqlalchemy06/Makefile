@@ -1,5 +1,5 @@
 # Created by: Dryice Dong Liu <dryice@dryice.name>
-# $FreeBSD: head/databases/py-sqlalchemy06/Makefile 367489 2014-09-07 07:00:41Z antoine $
+# $FreeBSD: head/databases/py-sqlalchemy06/Makefile 371173 2014-10-19 08:50:17Z mva $
 
 PORTNAME=	sqlalchemy06
 PORTVERSION=	0.6.9
@@ -15,9 +15,8 @@ COMMENT=	Python SQL toolkit and Object Relational Mapper (series 0.6)
 LICENSE=	MIT
 
 # Python3 ready
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 # bypass infrastructure bug
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options

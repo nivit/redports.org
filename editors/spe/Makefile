@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/editors/spe/Makefile 367888 2014-09-10 20:50:31Z gerald $
+# $FreeBSD: head/editors/spe/Makefile 371188 2014-10-19 15:43:33Z mva $
 
 PORTNAME=	SPE
 PORTVERSION=	0.8.4.h
@@ -14,7 +14,7 @@ COMMENT=	Stani's Python Editor
 
 NO_BUILD=	yes
 
-USE_PYTHON=	yes
+USES=		python
 USE_WX=		3.0+
 WX_COMPS=	python
 

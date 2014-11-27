@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/databases/py-Elixir/Makefile 343584 2014-02-10 05:20:14Z rm $
+# $FreeBSD: head/databases/py-Elixir/Makefile 371173 2014-10-19 08:50:17Z mva $
 
 PORTNAME=	Elixir
 PORTVERSION=	0.7.1
@@ -16,8 +16,7 @@ LICENSE=	MIT
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlalchemy06>=0.4.0:${PORTSDIR}/databases/py-sqlalchemy06
 
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

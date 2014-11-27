@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-stevedore/Makefile 352002 2014-04-24 13:09:51Z wg $
+# $FreeBSD: head/devel/py-stevedore/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	stevedore
 PORTVERSION=	0.15
@@ -23,9 +23,8 @@ OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
 TOX_CMD=	${LOCALBASE}/bin/tox
 
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.options.mk>
 
