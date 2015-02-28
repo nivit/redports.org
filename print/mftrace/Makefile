@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/print/mftrace/Makefile 356273 2014-06-03 01:15:13Z amdmi3 $
+# $FreeBSD: head/print/mftrace/Makefile 371452 2014-10-24 16:42:59Z mva $
 
 PORTNAME=	mftrace
 PORTVERSION=	1.2.18
@@ -23,10 +23,9 @@ RUN_DEPENDS+=	potrace:${PORTSDIR}/graphics/potrace
 .endif
 
 # Python3 ready
-USE_PYTHON=	yes
 USE_TEX=	base texmf
 GNU_CONFIGURE=	yes
-USES=		gmake
+USES=		gmake python
 MAKEFILE=	GNUmakefile
 
 
@@ -34,17 +33,13 @@ PLIST_FILES=	\
 		bin/gf2pbm \
 		bin/mftrace \
 		%%PYTHON_SITELIBDIR%%/afm.py \
-		%%PYTHON_SITELIBDIR%%/tfm.py
-.if !defined(NO_INSTALL_MANPAGES)
-PLIST_FILES+=	man/man1/mftrace.1.gz
-.endif
+		%%PYTHON_SITELIBDIR%%/tfm.py \
+		man/man1/mftrace.1.gz
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/gf2pbm ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/mftrace ${STAGEDIR}${PREFIX}/bin
-.if !defined(NO_INSTALL_MANPAGES)
 	${INSTALL_MAN} ${WRKSRC}/mftrace.1 ${STAGEDIR}${MANPREFIX}/man/man1
-.endif
 	@${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/tfm.py ${STAGEDIR}${PYTHON_SITELIBDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/afm.py ${STAGEDIR}${PYTHON_SITELIBDIR}

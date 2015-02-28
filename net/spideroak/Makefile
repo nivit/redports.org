@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/net/spideroak/Makefile 362611 2014-07-23 00:38:27Z nivit $
+# $FreeBSD: head/net/spideroak/Makefile 371449 2014-10-24 16:21:26Z mva $
 
 PORTNAME=	spideroak
 PORTVERSION=	5.1.6
@@ -38,8 +38,7 @@ SUB_FILES=	pkg-message
 
 USE_LINUX=	yes
 USE_LINUX_APPS=	xorglibs
-USE_PYTHON=	2
-USES=	desktop-file-utils
+USES=		desktop-file-utils python:2
 
 .include <bsd.port.options.mk>
 

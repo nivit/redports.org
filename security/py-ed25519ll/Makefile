@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/security/py-ed25519ll/Makefile 357852 2014-06-15 09:14:01Z mva $
+# $FreeBSD: head/security/py-ed25519ll/Makefile 371453 2014-10-24 16:50:42Z mva $
 
 PORTNAME=	ed25519ll
 PORTVERSION=	0.6
@@ -13,8 +13,7 @@ COMMENT=	Low-level ctypes wrapper for Ed25519 digital signatures
 
 LICENSE=	MIT
 
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

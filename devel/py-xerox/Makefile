@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-xerox/Makefile 362172 2014-07-18 01:56:36Z nivit $
+# $FreeBSD: head/devel/py-xerox/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	xerox
 PORTVERSION=	0.3.1
@@ -13,9 +13,7 @@ COMMENT=	Simple copy and paste in Python
 
 LICENSE=	MIT
 
-PYDISTUTILS_AUTOPLIST=	yes
-
-USE_PYDISTUTILS=	yes
-USE_PYTHON=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

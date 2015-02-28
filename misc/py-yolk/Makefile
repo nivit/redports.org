@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/misc/py-yolk/Makefile 357561 2014-06-12 04:52:30Z nivit $
+# $FreeBSD: head/misc/py-yolk/Makefile 371289 2014-10-20 17:59:37Z mva $
 
 PORTNAME=	yolk
 PORTVERSION=	0.4.3
@@ -14,12 +14,10 @@ COMMENT=	Command-line tool for querying PyPI and Python packages installed
 
 LICENSE=	BSD3CLAUSE
 
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python:2
+USE_PYTHON=	distutils autoplist
 
 OPTIONS_DEFINE=	EXAMPLES
-
-USE_PYTHON=	2
-USE_PYDISTUTILS=	yes
 
 .include <bsd.port.options.mk>
 

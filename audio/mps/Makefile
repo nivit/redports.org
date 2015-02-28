@@ -1,9 +1,10 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/audio/mps/Makefile 364073 2014-08-05 05:29:29Z nivit $
+# $FreeBSD: head/audio/mps/Makefile 371170 2014-10-19 07:33:09Z mva $
 
 PORTNAME=	mps
 PORTVERSION=	0.20.16
 #PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	CHEESESHOP
 
@@ -13,17 +14,15 @@ COMMENT=	Terminal based MP3 search, playback and download
 LICENSE=	GPLv3
 
 OPTIONS_DEFAULT=	MPLAYER
-OPTIONS_RADIO=	PLAYER
+OPTIONS_RADIO=		PLAYER
 OPTIONS_RADIO_PLAYER=	MPLAYER MPV
 
 MPV_DESC=	Mpv media player support
 
 # This port installs the following files in shared dirs
 # PLIST_FILES=	bin/mps
-PYDISTUTILS_AUTOPLIST=	yes
-
-USE_PYDISTUTILS=	yes
-USE_PYTHON=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.options.mk>
 

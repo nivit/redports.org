@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/audio/py-mpd/Makefile 343448 2014-02-09 10:31:37Z miwi $
+# $FreeBSD: head/audio/py-mpd/Makefile 371170 2014-10-19 07:33:09Z mva $
 
 PORTNAME=	mpd
 PORTVERSION=	0.3.0
@@ -13,9 +13,7 @@ DISTNAME=	python-${PORTNAME}-${PORTVERSION}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Python MPD client library
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
-
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

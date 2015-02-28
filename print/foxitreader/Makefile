@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/print/foxitreader/Makefile 349771 2014-03-31 16:30:11Z nivit $
+# $FreeBSD: head/print/foxitreader/Makefile 370149 2014-10-06 09:33:41Z lme $
 
 PORTNAME=	foxitreader
 PORTVERSION=	1.1.0
-#PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://cdn04.foxitsoftware.com/pub/foxit/%SUBDIR%/:reader,manual
 MASTER_SITE_SUBDIR=	reader/desktop/linux/1.x/${PORTVERSION:R}/enu/:reader \
@@ -25,7 +25,7 @@ OPTIONS_SUB=	yes
 
 USES=	gettext tar:bzip2
 USE_LINUX=	yes
-USE_LINUX_APPS=	cups-libs gtk2
+USE_LINUX_APPS=	avahi-libs cups-libs gtk2
 
 WRKSRC=	${WRKDIR}/${PORTVERSION:R}-release
 

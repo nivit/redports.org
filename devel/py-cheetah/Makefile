@@ -1,5 +1,5 @@
 # Created by: Hye-Shik Chang <perky@FreeBSD.org>
-# $FreeBSD: head/devel/py-cheetah/Makefile 346667 2014-03-01 17:59:33Z miwi $
+# $FreeBSD: head/devel/py-cheetah/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	cheetah
 PORTVERSION=	2.4.4
@@ -14,8 +14,7 @@ COMMENT=	HTML template engine for Python
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}markdown>=2.0.3:${PORTSDIR}/textproc/py-markdown
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

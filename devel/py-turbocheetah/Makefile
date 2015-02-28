@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/devel/py-turbocheetah/Makefile 346683 2014-03-01 18:04:08Z miwi $
+# $FreeBSD: head/devel/py-turbocheetah/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	TurboCheetah
 PORTVERSION=	1.0
@@ -15,9 +15,8 @@ COMMENT=	TurboGears plugin to support use of Cheetah templates
 
 RUN_DEPENDS=	cheetah:${PORTSDIR}/devel/py-cheetah
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.pre.mk>
 

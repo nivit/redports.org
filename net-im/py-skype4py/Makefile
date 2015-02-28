@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/net-im/py-skype4py/Makefile 358741 2014-06-21 20:33:23Z mva $
+# $FreeBSD: head/net-im/py-skype4py/Makefile 371450 2014-10-24 16:29:51Z mva $
 
 PORTNAME=	Skype4Py
 PORTVERSION=	1.0.35
@@ -13,9 +13,7 @@ COMMENT=	Skype (TM) API wrapper for Python
 
 LICENSE=	BSD3CLAUSE
 
-USE_PYTHON=		2
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
-USES=		zip
+USES=		python:2 zip
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

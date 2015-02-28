@@ -1,9 +1,10 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/sahi/Makefile 360203 2014-07-02 14:51:04Z vanilla $
+# $FreeBSD: head/www/sahi/Makefile 367888 2014-09-10 20:50:31Z gerald $
 
 PORTNAME=	sahi
 PORTVERSION=	3.5.${SAHI_BUILD}
 #PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}/${PORTNAME}-v${PORTVERSION:R:R:R:S,.,,}/${SAHI_BUILD:S,.,,g}/

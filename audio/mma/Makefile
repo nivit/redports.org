@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/audio/mma/Makefile 361838 2014-07-14 22:37:59Z nivit $
+# $FreeBSD: head/audio/mma/Makefile 371170 2014-10-19 07:33:09Z mva $
 
 PORTNAME=	mma
 PORTVERSION=	14.07
@@ -26,8 +26,7 @@ SHEBANG_FILES=	mma.py
 SUB_FILES=	mma_g.py
 SUB_LIST=	PYTHON_CMD=${PYTHON_CMD}
 
-USES=		shebangfix
-USE_PYTHON=	yes
+USES=		python shebangfix
 
 WRKDOC=	${WRKDIR}/${PORTNAME}-pdf-${DISTVERSION:S,a,,}
 WRKSRC=	${WRKDIR}/${PORTNAME}-bin-${DISTVERSION}

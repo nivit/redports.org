@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/py-watchdog/Makefile 361843 2014-07-15 00:26:36Z nivit $
+# $FreeBSD: head/devel/py-watchdog/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	watchdog
 PORTVERSION=	0.8.0
@@ -27,11 +27,10 @@ OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 OPTIONS_DEFINE=	DOCS
 
 PORTDOCS=	*
-PYDISTUTILS_AUTOPLIST=	yes
 
-USE_GITHUB=		yes
-USE_PYDISTUTILS=	yes
-USE_PYTHON=		yes
+USE_GITHUB=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.options.mk>
 

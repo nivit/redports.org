@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/py-gntp/Makefile 357762 2014-06-14 10:40:49Z mva $
+# $FreeBSD: head/net/py-gntp/Makefile 371449 2014-10-24 16:21:26Z mva $
 
 PORTNAME=	gntp
 PORTVERSION=	0.8
@@ -19,9 +19,8 @@ OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 OPTIONS_DEFINE=	DOCS
 
 USE_GITHUB=	yes
-USE_PYTHON=		2
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python:2
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.options.mk>
 

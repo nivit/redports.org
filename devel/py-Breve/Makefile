@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-Breve/Makefile 357277 2014-06-10 07:39:01Z olgeni $
+# $FreeBSD: head/devel/py-Breve/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	Breve
 PORTVERSION=	1.3.0
@@ -12,8 +12,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Python s-expression style template engine
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

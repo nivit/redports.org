@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-dirspec/Makefile 345012 2014-02-19 08:07:35Z miwi $
+# $FreeBSD: head/devel/py-dirspec/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	dirspec
 PORTVERSION=	13.05
@@ -14,8 +14,7 @@ COMMENT=	XDG Base and User directories implementation
 
 LICENSE=	GPLv3
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

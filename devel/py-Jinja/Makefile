@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-Jinja/Makefile 346872 2014-03-03 09:47:32Z rm $
+# $FreeBSD: head/devel/py-Jinja/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	Jinja
 PORTVERSION=	1.2
@@ -14,9 +14,8 @@ COMMENT=	Fast and easy to use stand-alone template engine
 
 LICENSE=	BSD3CLAUSE
 
-USE_PYTHON=		2
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python:2
+USE_PYTHON=	distutils autoplist
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 PORTDOCS=	*

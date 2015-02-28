@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: head/textproc/py-enchant/Makefile 360902 2014-07-06 14:02:52Z wg $
+# $FreeBSD: head/textproc/py-enchant/Makefile 367888 2014-09-10 20:50:31Z gerald $
 
 PORTNAME=	enchant
 PORTVERSION=	1.6.5
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	textproc devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}

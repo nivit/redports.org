@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/py-bottle/Makefile 363686 2014-08-01 03:37:05Z nivit $
+# $FreeBSD: head/www/py-bottle/Makefile 371114 2014-10-18 11:39:15Z rm $
 
 PORTNAME=	bottle
 PORTVERSION=	0.12.7
@@ -13,8 +13,7 @@ COMMENT=	Fast and simple WSGI-framework for small web-applications
 
 LICENSE=	MIT
 
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

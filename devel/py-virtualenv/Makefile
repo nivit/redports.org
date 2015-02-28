@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/py-virtualenv/Makefile 354478 2014-05-19 01:24:40Z nivit $
+# $FreeBSD: head/devel/py-virtualenv/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	virtualenv
 PORTVERSION=	1.11.6
@@ -19,9 +19,8 @@ OPTIONS_DEFINE=	DOCS
 
 DOCS_BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>=1.1.3:${PORTSDIR}/textproc/py-sphinx
 
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.options.mk>
 

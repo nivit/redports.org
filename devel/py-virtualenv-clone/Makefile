@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-virtualenv-clone/Makefile 354479 2014-05-19 01:28:50Z nivit $
+# $FreeBSD: head/devel/py-virtualenv-clone/Makefile 371280 2014-10-20 16:04:12Z mva $
 
 PORTNAME=	virtualenv-clone
 PORTVERSION=	0.2.5
@@ -12,8 +12,7 @@ MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Python virtualenv cloning script
 
 # Python3 ready
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

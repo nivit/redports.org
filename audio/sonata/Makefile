@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/audio/sonata/Makefile 357139 2014-06-09 11:21:52Z olgeni $
+# $FreeBSD: head/audio/sonata/Makefile 371170 2014-10-19 07:33:09Z mva $
 
 PORTNAME=	sonata
 PORTVERSION=	1.6.2.1
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	audio python
 MASTER_SITES=	http://codingteam.net/project/sonata/upload/releases/
 
@@ -14,11 +14,9 @@ LICENSE=	GPLv3
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mpd>=0.2.0:${PORTSDIR}/audio/py-mpd
 
-USES=		gettext pkgconfig
+USES=		gettext pkgconfig python
 USE_GNOME=	pygtk2
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USE_PYTHON=	distutils autoplist
 
 OPTIONS_DEFINE=	DOCS MANPAGES MMKEYS MPD PYGNOMEEXTRAS TAGLIB ZSI
 OPTIONS_DEFAULT=	MPD
@@ -29,7 +27,7 @@ TAGLIB_DESC=	Install support for editing metadata
 ZSI_DESC=	Install support for automatic lyrics fetching
 OPTIONS_SUB=	yes
 
-MANPAGES_MAKE_ENV_OFF=	NO_INSTALL_MANPAGES=${NO_INSTALL_MANPAGES}
+MANPAGES_MAKE_ENV_OFF=	NO_INSTALL_MANPAGES=yes
 DOCS_MAKE_ENV=	NOPORTDOCS=${NOPORTDOCS}
 MPD_RUN_DEPENDS+=	musicpd:${PORTSDIR}/audio/musicpd
 MMKEYS_RUN_DEPENDS=${PYTHON_PKGNAMEPREFIX}dbus>=0.82.4:${PORTSDIR}/devel/py-dbus

@@ -1,9 +1,10 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/multimedia/mps-youtube/Makefile 361732 2014-07-14 03:49:43Z nivit $
+# $FreeBSD: head/multimedia/mps-youtube/Makefile 371331 2014-10-21 17:22:07Z mva $
 
 PORTNAME=	mps-youtube
 PORTVERSION=	0.01.46
 #PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	CHEESESHOP
 
@@ -22,10 +23,8 @@ MPV_DESC=	Mpv media player support
 
 # This port installs the following files in shared dirs
 # PLIST_FILES=	bin/mpsyt
-PYDISTUTILS_AUTOPLIST=	yes
-
-USE_PYDISTUTILS=	yes
-USE_PYTHON=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.options.mk>
 

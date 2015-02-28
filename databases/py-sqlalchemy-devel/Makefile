@@ -1,5 +1,5 @@
 # Created by: Dryice Dong Liu <dryice@dryice.name>
-# $FreeBSD: head/databases/py-sqlalchemy-devel/Makefile 364559 2014-08-10 19:03:50Z antoine $
+# $FreeBSD: head/databases/py-sqlalchemy-devel/Makefile 371173 2014-10-19 08:50:17Z mva $
 
 PORTNAME=	sqlalchemy
 PORTVERSION=	0.8.2
@@ -18,16 +18,15 @@ LICENSE=	MIT
 TEST_DEPENDS:=	${RUN_DEPENDS} \
 		${PYTHON_PKGNAMEPREFIX}nose>0:${PORTSDIR}/devel/py-nose
 
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 PY2TO3_CMD=		${LOCALBASE}/bin/2to3-${PYTHON_VER}
 PY2TO3_ARGS=		--no-diffs --nobackups --verbose --write
 
 OPTIONS_DEFINE=		DOCS EXAMPLES TESTS
 OPTIONS_MULTI=		BACKEND
-OPTIONS_MULTI_BACKEND=	FIREBIRD MSSQL MYSQL PGSQL SQLITE SYBASE
+OPTIONS_MULTI_BACKEND=	MSSQL MYSQL PGSQL SQLITE SYBASE
 OPTIONS_DEFAULT=	SQLITE
 
 SYBASE_DESC=	Sybase backend
@@ -36,7 +35,6 @@ TESTS_DESC=	Include nose for unit tests
 # bypass infrastructure bug
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
-FIREBIRD_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}kinterbasdb>0:${PORTSDIR}/databases/kinterbasdb
 MSSQL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}mssql>0:${PORTSDIR}/databases/py-mssql
 PGSQL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}psycopg2>=2.0.8:${PORTSDIR}/databases/py-psycopg2
 SQLITE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:${PORTSDIR}/databases/py-sqlite3

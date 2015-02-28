@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/java/eclipse-drjava/Makefile 347771 2014-03-10 15:21:21Z bapt $
+# $FreeBSD: head/java/eclipse-drjava/Makefile 367888 2014-09-10 20:50:31Z gerald $
 
 PORTNAME=	drjava
 PORTVERSION=	0.9.8
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	java devel
 MASTER_SITES=	SF/${PORTNAME}/3.%20DrJava%20Eclipse%20Plug-in/${PORTNAME}-eclipse-${PORTVERSION}
 PKGNAMEPREFIX=	eclipse-
