@@ -43,4 +43,9 @@ SHEBANG_FILES=	bin/shutter
 
 USES=	perl5 shebangfix
 
+do-install:
+	@(cd ${WRKSRC}/share/shutter && \
+	${INSTALL_SCRIPT} bin/shutter ${STAGEDIR}${PREFIX}/bin/shutter && \
+	${COPYTREE_SHARE} resources ${STAGEDIR}${DATADIR})
+
 .include <bsd.port.mk>
