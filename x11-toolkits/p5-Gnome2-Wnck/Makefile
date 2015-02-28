@@ -19,6 +19,8 @@ BUILD_DEPENDS=	p5-Glib2>=0:${PORTSDIR}/devel/p5-Glib2 \
 		p5-ExtUtils-PkgConfig>=0:${PORTSDIR}/devel/p5-ExtUtils-PkgConfig
 LIB_DEPENDS=	libwnck-1.so:${PORTSDIR}/x11-toolkits/libwnck
 
+MAKE_JOBS_UNSAFE=	yes
+
 USES=		perl5
 USE_PERL5=	configure
 
