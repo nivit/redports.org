@@ -40,9 +40,12 @@ RUN_DEPENDS=	librsvg2>=2.40.6:${PORTSDIR}/graphics/librsvg2 \
 
 INSTALLS_ICONS=	yes
 
+METADATA_DESC=	Enable Shutter to write Metadata
+METADATA_RUN_DEPENDS=	p5-Image-ExifTool>=9.76:${PORTSDIR}/graphics/p5-Image-ExifTool
+
 NO_BUILD=	yes
 
-OPTIONS_DEFINE=	NLS
+OPTIONS_DEFINE=	METADATA NLS
 OPTIONS_SUB=	yes
 
 SHEBANG_FILES=	bin/shutter share/shutter/resources/system/upload_plugins/*.pm
@@ -63,10 +66,10 @@ do-install:
 	${INSTALL_MAN} share/man/man1/shutter.1.gz ${STAGEDIR}${MANPREFIX}/man/man1/)
 	@(cd ${WRKSRC}/share && \
 	${COPYTREE_SHARE} "icons pixmaps" ${STAGEDIR}${LOCALBASE}/share)
-.	if ${PORT_OPTIONS:MNLS}
+.if ${PORT_OPTIONS:MNLS}
 	@(cd ${WRKSRC}/share/locale && \
 	${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/share/locale)
-.	endif
+.endif
 	@(cd ${WRKSRC}/share/shutter && \
 	${COPYTREE_SHARE} resources ${STAGEDIR}${DATADIR})
 
