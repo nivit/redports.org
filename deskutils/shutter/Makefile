@@ -20,6 +20,7 @@ RUN_DEPENDS=	librsvg2>=2.40.6:${PORTSDIR}/graphics/librsvg2 \
 		p5-File-Which>=1.09:${PORTSDIR}/sysutils/p5-File-Which \
 		p5-Gnome2-VFS>=1.082:${PORTSDIR}/x11-toolkits/p5-Gnome2-VFS \
 		p5-Gnome2>=1.045:${PORTSDIR}/x11-toolkits/p5-Gnome2 \
+		p5-Goo-Canvas>=0.06:${PORTSDIR}/devel/p5-Goo-Canvas \
 		p5-Gtk2-ImageView>=0.05:${PORTSDIR}/x11-toolkits/p5-Gtk2-ImageView \
 		p5-Gtk2>=1.2491:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
 		p5-JSON-XS>=3.01:${PORTSDIR}/converters/p5-JSON-XS \
@@ -37,15 +38,36 @@ RUN_DEPENDS=	librsvg2>=2.40.6:${PORTSDIR}/graphics/librsvg2 \
 		p5-XML-Simple>=2.20:${PORTSDIR}/textproc/p5-XML-Simple \
 		xdg-utils>=1.0.2.20130919:${PORTSDIR}/devel/xdg-utils
 
+INSTALLS_ICONS=	yes
+
 NO_BUILD=	yes
 
-SHEBANG_FILES=	bin/shutter
+OPTIONS_DEFINE=	NLS
+OPTIONS_SUB=	yes
 
-USES=	perl5 shebangfix
+SHEBANG_FILES=	bin/shutter share/shutter/resources/system/upload_plugins/*.pm
+SHUTTER_DESKTOP=	share/applications/shutter.desktop
+
+USE_PERL5=	run
+USES=	desktop-file-utils gettext-runtime perl5 shebangfix
+
+.include <bsd.port.options.mk>
+
+post-patch:
+	${REINPLACE_CMD} -e '/OnlyShowIn/d' ${WRKSRC}/${SHUTTER_DESKTOP}
 
 do-install:
+	(cd ${WRKSRC} && \
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/shutter ${STAGEDIR}${PREFIX}/bin/shutter && \
+	desktop-file-install --dir ${STAGEDIR}${DESKTOPDIR} ${SHUTTER_DESKTOP} && \
+	${INSTALL_MAN} share/man/man1/shutter.1.gz ${STAGEDIR}${MANPREFIX}/man/man1/)
+	@(cd ${WRKSRC}/share && \
+	${COPYTREE_SHARE} "icons pixmaps" ${STAGEDIR}${LOCALBASE}/share)
+.	if ${PORT_OPTIONS:MNLS}
+	@(cd ${WRKSRC}/share/locale && \
+	${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/share/locale)
+.	endif
 	@(cd ${WRKSRC}/share/shutter && \
-	${INSTALL_SCRIPT} bin/shutter ${STAGEDIR}${PREFIX}/bin/shutter && \
 	${COPYTREE_SHARE} resources ${STAGEDIR}${DATADIR})
 
 .include <bsd.port.mk>
