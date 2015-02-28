@@ -2,22 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	shutter
-PORTVERSION=
+PORTVERSION=	0.93.1
 #PORTREVISION=	0
-#PORTEPOCH=	0
 CATEGORIES=
-MASTER_SITES=
-#MASTER_SITE_SUBDIR=
-#PKGNAMEPREFIX=
-#PKGNAMESUFFIX=
-#DISTNAME=
-#EXTRACT_SUFX=
-#DISTFILES=
-#DIST_SUBDIR=	${PORTNAME}
-#EXTRACT_ONLY=
+MASTER_SITES=	http://shutter-project.org/wp-content/uploads/releases/tars/
 
 MAINTAINER=	nivit@FreeBSD.org
-COMMENT=
+COMMENT=	Screenshot tool
 
-.include <bsd.port.pre.mk>
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
