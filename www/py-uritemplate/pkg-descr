@@ -1,3 +1,4 @@
-[description of the port]
+This is a Python implementation of RFC6570, URI Template, and can expand
+templates up to and including Level 4 in that specification.
 
-WWW: http://port.home.page/
+WWW: https://github.com/uri-templates/uritemplate-py/
