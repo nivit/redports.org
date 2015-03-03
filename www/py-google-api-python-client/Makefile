@@ -26,7 +26,7 @@ GAE_RUN_DEPENDS=	google-appengine>=1.4.3:${PORTSDIR}/www/google-appengine
 OPTIONS_DEFINE=	DJANGO GAE WEBTEST
 
 USES=		python:2
-USE_PYTHON=	distutils
+USE_PYTHON=	autoplist distutils
 
 WEBTEST_DESC=	Use WebTest helper to test WSGI apps (Python 2.6+)
 WEBTEST_RUN_DEPENDS=	${PKGNAMEPREFIX}WebTest>=1.3.3:${PORTSDIR}/www/py-WebTest \
