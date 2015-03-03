@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/py-google-api-python-client/Makefile 357724 2014-06-13 22:01:22Z nivit $
+# $FreeBSD: head/www/py-google-api-python-client/Makefile 376109 2015-01-03 08:41:20Z mva $
 
 PORTNAME=	google-api-python-client
 PORTVERSION=	1.2
@@ -17,8 +17,8 @@ RUN_DEPENDS=	${PKGNAMEPREFIX}gflags>=1.4:${PORTSDIR}/devel/py-gflags \
 		${PKGNAMEPREFIX}httplib2>=0.6.0:${PORTSDIR}/www/py-httplib2 \
 		${PKGNAMEPREFIX}oauth2>=1.5.167:${PORTSDIR}/net/py-oauth2
 
-USE_PYTHON=	2
-USE_PYDISTUTILS=	yes
+USES=		python:2
+USE_PYTHON=	distutils
 
 # bypass infrastructure bug
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options

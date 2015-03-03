@@ -1,9 +1,8 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/textproc/py-pygments/Makefile 361999 2014-07-15 20:00:43Z adamw $
+# $FreeBSD: head/textproc/py-pygments/Makefile 377657 2015-01-22 14:23:43Z nivit $
 
 PORTNAME=	pygments
-PORTVERSION=	1.6
-PORTREVISION=	2
+PORTVERSION=	2.0.2
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,10 +13,7 @@ COMMENT=	Syntax highlighter written in Python
 
 LICENSE=	BSD2CLAUSE
 
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
-
-OPTIONS_DEFINE=	DOCS
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

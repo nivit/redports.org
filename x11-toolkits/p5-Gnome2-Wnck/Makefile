@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/x11-toolkits/p5-Gnome2-Wnck/Makefile 380163 2015-02-28 22:43:45Z nivit $
 
 PORTNAME=	Gnome2-Wnck
 PORTVERSION=	0.16

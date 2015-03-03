@@ -1,8 +1,8 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/archivers/quazip/Makefile 348485 2014-03-17 15:54:22Z swills $
+# $FreeBSD: head/archivers/quazip/Makefile 378823 2015-02-11 09:20:18Z nivit $
 
 PORTNAME=	quazip
-PORTVERSION=	0.6.2
+PORTVERSION=	0.7.1
 CATEGORIES=	archivers
 MASTER_SITES=	SF
 
@@ -13,6 +13,6 @@ LICENSE=	LGPL21
 
 USES=		qmake
 USE_LDCONFIG=	yes
-USE_QT4=	corelib moc_build qtestlib
+USE_QT4=	corelib moc_build network_build qtestlib_build
 
 .include <bsd.port.mk>

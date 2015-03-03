@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/sysutils/vttest/Makefile 360535 2014-07-04 03:01:58Z nivit $
+# $FreeBSD: head/sysutils/vttest/Makefile 374505 2014-12-11 00:40:16Z feld $
 
 PORTNAME=	vttest
 PORTVERSION=	2014.03.05
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Program to test "VT100-compatibility" of terminals
 
-LICENSE=	BSD
+LICENSE=	MIT
 
 GNU_CONFIGURE=	yes
 

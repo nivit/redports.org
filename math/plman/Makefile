@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/math/plman/Makefile 361099 2014-07-07 15:31:01Z olgeni $
+# $FreeBSD: head/math/plman/Makefile 377747 2015-01-23 16:03:57Z antoine $
 
 PORTNAME=	plman
 PORTVERSION=	2.5.1
@@ -11,8 +11,6 @@ DISTNAME=	${PORTNAME}${PORTVERSION:C/\./_/g}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Propositional Logic sentence shell/interpreter
-
-RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
 NO_BUILD=	yes
 

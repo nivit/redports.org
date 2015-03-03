@@ -1,9 +1,10 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-pip/Makefile 371280 2014-10-20 16:04:12Z mva $
+# $FreeBSD: head/devel/py-pip/Makefile 378561 2015-02-06 22:21:40Z nivit $
 
 PORTNAME=	pip
-PORTVERSION=	1.5.6
+PORTVERSION=	6.0.8
 CATEGORIES=	devel python
+MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	nivit@FreeBSD.org
@@ -14,14 +15,10 @@ LICENSE=	MIT
 DOCS_BUILD_DEPENDS=	sphinx-build:${PORTSDIR}/textproc/py-sphinx
 DOCS_MAKE_ENV=	HOME=${WRKDIR}
 
-GH_ACCOUNT=	pypa
-GH_COMMIT=	437fb31
-
 OPTIONS_DEFINE=	DOCS
 
 USES=		python shebangfix
-USE_GITHUB=	yes
-USE_PYTHON=	distutils autoplist
+USE_PYTHON=	autoplist distutils
 
 # This port installs the following file in shared dirs
 # PLIST_FILES= bin/pip

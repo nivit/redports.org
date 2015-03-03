@@ -1,24 +1,22 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/py-pafy/Makefile 362934 2014-07-25 21:40:24Z nivit $
+# $FreeBSD: head/www/py-pafy/Makefile 379020 2015-02-14 21:20:30Z nivit $
 
 PORTNAME=	pafy
-PORTVERSION=	0.3.58
+PORTVERSION=	0.3.72
 #PORTREVISION=	0
 CATEGORIES=	www
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-DISTNAME=	Pafy-${PORTVERSION}
+DISTFILES=	Pafy-${PORTVERSION}.tar.gz
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Python API for YouTube
 
 LICENSE=	GPLv3
 
-# This port installs the following files in shared dirs
-# PLIST_FILES=	bin/ytdl
-PYDISTUTILS_AUTOPLIST=	yes
+USES=	python
+USE_PYTHON=	autoplist distutils
 
-USE_PYDISTUTILS=	yes
-USE_PYTHON=	yes
+WRKSRC=	${WRKDIR}/${DISTFILES:R:R}
 
 .include <bsd.port.mk>

@@ -1,8 +1,8 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/net/py-speedtest-cli/Makefile 371449 2014-10-24 16:21:26Z mva $
+# $FreeBSD: head/net/py-speedtest-cli/Makefile 378205 2015-01-31 12:55:28Z nivit $
 
 PORTNAME=	speedtest-cli
-PORTVERSION=	0.2.5
+PORTVERSION=	0.3.1
 #PORTREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	CHEESESHOP
@@ -14,6 +14,6 @@ COMMENT=	Command line interface for testing internet bandwidth
 LICENSE=	APACHE20
 
 USES=		python
-USE_PYTHON=	distutils autoplist
+USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

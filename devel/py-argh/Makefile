@@ -1,7 +1,7 @@
-# $FreeBSD: head/devel/py-argh/Makefile 371280 2014-10-20 16:04:12Z mva $
+# $FreeBSD: head/devel/py-argh/Makefile 377963 2015-01-26 23:14:46Z nivit $
 
 PORTNAME=	argh
-PORTVERSION=	0.25.0
+PORTVERSION=	0.26.1
 PORTREVISION=	0
 CATEGORIES=	devel
 MASTER_SITES=	CHEESESHOP

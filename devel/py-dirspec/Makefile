@@ -1,11 +1,11 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-dirspec/Makefile 371280 2014-10-20 16:04:12Z mva $
+# $FreeBSD: head/devel/py-dirspec/Makefile 378158 2015-01-30 15:32:36Z nivit $
 
 PORTNAME=	dirspec
-PORTVERSION=	13.05
-PORTREVISION=	1
+PORTVERSION=	13.10
+PORTREVISION=	0
 CATEGORIES=	devel
-MASTER_SITES=	https://launchpadlibrarian.net/141027576/ \
+MASTER_SITES=	https://launchpadlibrarian.net/152764618/ \
 		http://nivit.altervista.org/FreeBSD/ports/distfiles/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -15,6 +15,6 @@ COMMENT=	XDG Base and User directories implementation
 LICENSE=	GPLv3
 
 USES=		python
-USE_PYTHON=	distutils autoplist
+USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

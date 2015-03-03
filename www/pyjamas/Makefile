@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/pyjamas/Makefile 364158 2014-08-06 09:11:57Z olgeni $
+# $FreeBSD: head/www/pyjamas/Makefile 376109 2015-01-03 08:41:20Z mva $
 
 PORTNAME=	pyjamas
 PORTVERSION=	0.5
@@ -11,11 +11,9 @@ DISTNAME=	Pyjamas-${PORTVERSION}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Port of Google Web Toolkit to Python
 
-USE_PYTHON=	yes
 # install/require some libraries in sys.prefix
-USE_PYTHON_PREFIX=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist pythonprefix
 
 REINPLACE_ARGS=	-i '' -e 's,../../bin,${PREFIX}/bin,'
 

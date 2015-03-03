@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/devel/py-turbojson11/Makefile 345003 2014-02-19 05:31:15Z miwi $
+# $FreeBSD: head/devel/py-turbojson11/Makefile 376111 2015-01-03 09:14:10Z mva $
 
 PORTNAME=	TurboJson
 PORTVERSION=	1.1.4
@@ -17,8 +17,7 @@ RUN_DEPENDS+=	${PYTHON_PKGNAMEPREFIX}RuleDispatch>=0.5.a0.r2306:${PORTSDIR}/deve
 		${PYTHON_PKGNAMEPREFIX}simplejson>=1.9.1:${PORTSDIR}/devel/py-simplejson \
 		${PYTHON_PKGNAMEPREFIX}DecoratorTools>=1.7:${PORTSDIR}/devel/py-decoratortools
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

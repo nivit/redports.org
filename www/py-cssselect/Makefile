@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/py-cssselect/Makefile 350356 2014-04-06 13:37:00Z nivit $
+# $FreeBSD: head/www/py-cssselect/Makefile 376109 2015-01-03 08:41:20Z mva $
 
 PORTNAME=	cssselect
 PORTVERSION=	0.9.1
@@ -16,9 +16,8 @@ LICENSE=	BSD3CLAUSE
 OPTIONS_DEFINE=	DOCS
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.options.mk>
 

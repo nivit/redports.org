@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/py-webob/Makefile 354388 2014-05-18 03:29:57Z nivit $
+# $FreeBSD: head/www/py-webob/Makefile 376109 2015-01-03 08:41:20Z mva $
 
 PORTNAME=	webob
 PORTVERSION=	1.4
@@ -19,14 +19,11 @@ OPTIONS_DEFINE= DOCS TESTS
 
 PORTDOCS=	*
 
-PYDISTUTILS_AUTOPLIST=	yes
-PYDISTUTILS_PKGVERSION=	${DISTVERSION}
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 TESTS_BUILD_DEPENDS=	nosetests:${PORTSDIR}/devel/py-nose
 TESTS_DESC=	Run tests with Nose
-
-USE_PYDISTUTILS=	yes
-USE_PYTHON=	yes
 
 .include <bsd.port.options.mk>
 

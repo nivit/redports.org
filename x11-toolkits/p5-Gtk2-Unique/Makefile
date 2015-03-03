@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/x11-toolkits/p5-Gtk2-Unique/Makefile 380164 2015-02-28 22:47:16Z nivit $
 
 PORTNAME=	Gtk2-Unique
 PORTVERSION=	0.05

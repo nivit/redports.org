@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/textproc/py-genshi/Makefile 352986 2014-05-05 09:45:36Z bapt $
+# $FreeBSD: head/textproc/py-genshi/Makefile 374477 2014-12-10 16:09:19Z feld $
 
 PORTNAME=	Genshi
 PORTVERSION=	0.7
@@ -12,15 +12,14 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Python toolkit for stream-based generation of output for the web
 
-LICENSE=	BSD
+LICENSE=	BSD3CLAUSE
 
 OPTIONS_DEFINE=	BABEL
 OPTIONSFILE?=	${PORT_DBDIR}/py-${PORTNAME}/options
 BABEL_DESC=	I18n support through the Babel plugin
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.options.mk>
 

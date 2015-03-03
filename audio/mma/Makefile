@@ -1,8 +1,8 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/audio/mma/Makefile 371170 2014-10-19 07:33:09Z mva $
+# $FreeBSD: head/audio/mma/Makefile 378678 2015-02-08 20:09:03Z nivit $
 
 PORTNAME=	mma
-PORTVERSION=	14.07
+PORTVERSION=	15.01
 PORTREVISION=	0
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mellowood.ca/${PORTNAME}/
@@ -50,14 +50,10 @@ do-build:
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}
-	@${INSTALL_SCRIPT} ${WRKSRC}/mma.py ${STAGEDIR}${MMABIN}
-.for d in lib includes MMA
-	@cd ${WRKSRC} && ${COPYTREE_SHARE} ${d} ${STAGEDIR}${DATADIR} "-not -name *\.bak"
-.endfor
-.if ${PORT_OPTIONS:MEXAMPLES}
+	${INSTALL_SCRIPT} ${WRKSRC}/mma.py ${STAGEDIR}${MMABIN}
+	cd ${WRKSRC} && ${COPYTREE_SHARE} "lib includes MMA" ${STAGEDIR}${DATADIR} "-not -name *\.bak"
 	@${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
 	(cd ${WRKSRC}/egs && ${COPYTREE_SHARE} . ${STAGEDIR}${EXAMPLESDIR})
-.endif
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}/pdf
 	(cd ${WRKDOC} && \
 	${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR}/pdf/ "! -name README")

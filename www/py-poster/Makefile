@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/py-poster/Makefile 359715 2014-06-28 20:35:26Z miwi $
+# $FreeBSD: head/www/py-poster/Makefile 376109 2015-01-03 08:41:20Z mva $
 
 PORTNAME=	poster
 PORTVERSION=	0.8.1
@@ -12,9 +12,8 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Streaming HTTP uploads and multipart/form-data encoding
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 post-extract:
 	${RM} -r ${WRKSRC}/tests

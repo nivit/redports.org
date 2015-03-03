@@ -1,5 +1,5 @@
 # Created by: Dryice Liu	<dryice@dryice.name>
-# $FreeBSD: head/www/py-paste/Makefile 343585 2014-02-10 05:32:35Z miwi $
+# $FreeBSD: head/www/py-paste/Makefile 376109 2015-01-03 08:41:20Z mva $
 
 PORTNAME=	Paste
 PORTVERSION=	1.7.5.1
@@ -11,8 +11,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Tools for using a Web Server Gateway Interface stack
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST= yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

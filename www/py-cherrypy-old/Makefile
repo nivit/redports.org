@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: head/www/py-cherrypy-old/Makefile 371115 2014-10-18 11:42:24Z rm $
+# $FreeBSD: head/www/py-cherrypy-old/Makefile 375378 2014-12-24 00:14:11Z bofh $
 
 PORTNAME=	cherrypy
 PORTVERSION=	2.3.0
@@ -11,7 +11,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 PKGNAMESUFFIX=	-old
 DISTNAME=	CherryPy-${PORTVERSION:C/\.b$/beta/}
 
-MAINTAINER=	5u623l20@gmail.com
+MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Pythonic, object-oriented web development framework
 
 LICENSE=	BSD3CLAUSE

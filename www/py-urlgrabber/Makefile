@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/py-urlgrabber/Makefile 353326 2014-05-08 16:08:08Z vanilla $
+# $FreeBSD: head/www/py-urlgrabber/Makefile 376109 2015-01-03 08:41:20Z mva $
 
 PORTNAME=	urlgrabber
 PORTVERSION=	3.9.1
@@ -16,8 +16,8 @@ LICENSE=	LGPL21
 BUILD_DEPENDS=	${PKGNAMEPREFIX}curl>=7.19.0_1:${PORTSDIR}/ftp/py-curl
 RUN_DEPENDS=	${PKGNAMEPREFIX}curl>=7.19.0_1:${PORTSDIR}/ftp/py-curl
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
+USES=		python
+USE_PYTHON=	distutils
 
 REINPLACE_ARGS=	-i.bak -e 's,%%DOCSDIR%%,${DOCSDIR},'
 DOCSDIR=	${PREFIX}/share/doc/${PYTHON_PKGNAMEPREFIX}${PORTNAME}

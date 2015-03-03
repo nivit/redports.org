@@ -1,9 +1,9 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/textproc/gladtex/Makefile 363904 2014-08-03 14:15:08Z olgeni $
+# $FreeBSD: head/textproc/gladtex/Makefile 377033 2015-01-14 18:19:32Z antoine $
 
 PORTNAME=	gladtex
 PORTVERSION=	1.3
-PORTREVISION=	0
+PORTREVISION=	3
 CATEGORIES=	textproc math www
 MASTER_SITES=	SF
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -14,7 +14,7 @@ COMMENT=	Program to replace LaTeX formulas in HTML files with images
 LICENSE=	GPLv2
 
 LIB_DEPENDS=	libgif.so:${PORTSDIR}/graphics/giflib \
-		libpng15.so:${PORTSDIR}/graphics/png
+		libpng.so:${PORTSDIR}/graphics/png
 
 USE_TEX=	latex dvipsk
 BINPATH=	${PREFIX}/bin

@@ -1,8 +1,8 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/py-pyquery/Makefile 364158 2014-08-06 09:11:57Z olgeni $
+# $FreeBSD: head/www/py-pyquery/Makefile 378124 2015-01-29 17:00:42Z nivit $
 
 PORTNAME=	pyquery
-PORTVERSION=	1.2.8
+PORTVERSION=	1.2.9
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -24,11 +24,8 @@ DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 
 OPTIONS_DEFINE=	DOCS
 
-PYDISTUTILS_AUTOPLIST=	yes
-
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-USES=		zip
+USES=		python zip
+USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.options.mk>
 
@@ -37,8 +34,9 @@ PYDISTUTILS_BUILD_TARGET+=	build_sphinx -a -E
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	@(cd ${WRKSRC}/docs/_build/html && \
-	${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR} "! -name .buildinfo -or ! -name objects.inv")
+	@(cd ${WRKSRC}/build/sphinx/html && \
+	${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR} \
+		"! -name .buildinfo -or ! -name objects.inv")
 .endif
 
 .include <bsd.port.mk>

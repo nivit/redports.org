@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: head/www/py-cherrypy/Makefile 356279 2014-06-03 02:54:07Z nivit $
+# $FreeBSD: head/www/py-cherrypy/Makefile 376109 2015-01-03 08:41:20Z mva $
 
 PORTNAME=	cherrypy
 PORTVERSION=	3.2.6
@@ -21,10 +21,9 @@ EXAMPLESDIR=	${PREFIX}/share/examples/${PKGNAMEPREFIX}${PORTNAME}
 OPTIONS_DEFINE=	EXAMPLES
 
 PORTEXAMPLES=	*
-PYDISTUTILS_AUTOPLIST=	yes
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.options.mk>
 

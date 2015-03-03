@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/www/py-wikitools/Makefile 346706 2014-03-01 18:14:28Z miwi $
+# $FreeBSD: head/www/py-wikitools/Makefile 376109 2015-01-03 08:41:20Z mva $
 
 PORTNAME=	wikitools
 PORTVERSION=	1.1.1
@@ -13,9 +13,8 @@ COMMENT=	Python package for interacting with a MediaWiki wiki
 
 PROJECTHOST=	python-${PORTNAME}
 
-USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.pre.mk>
 

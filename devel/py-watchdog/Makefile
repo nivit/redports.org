@@ -1,7 +1,7 @@
-# $FreeBSD: head/devel/py-watchdog/Makefile 371280 2014-10-20 16:04:12Z mva $
+# $FreeBSD: head/devel/py-watchdog/Makefile 378426 2015-02-04 22:39:53Z nivit $
 
 PORTNAME=	watchdog
-PORTVERSION=	0.8.0
+PORTVERSION=	0.8.2
 PORTREVISION=	0
 CATEGORIES=	devel
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -20,7 +20,7 @@ DOCS_BUILD_DEPENDS=	${PKGNAMEPREFIX}pathtools>=0.1.2:${PORTSDIR}/devel/py-pathto
 DOCSDIR=	${PREFIX}/share/doc/${PKGNAMEPREFIX}${PORTNAME}
 
 GH_ACCOUNT=	gorakhargosh
-GH_COMMIT=	93ff1da
+GH_COMMIT=	aec1529
 GH_TAGNAME=	v${PORTVERSION}
 
 OPTIONSFILE=	${PORT_DBDIR}/py-${PORTNAME}/options
@@ -30,7 +30,7 @@ PORTDOCS=	*
 
 USE_GITHUB=	yes
 USES=		python
-USE_PYTHON=	distutils autoplist
+USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.options.mk>
 

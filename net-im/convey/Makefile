@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@email.it>
-# $FreeBSD: head/net-im/convey/Makefile 361440 2014-07-10 12:13:11Z olgeni $
+# $FreeBSD: head/net-im/convey/Makefile 377747 2015-01-23 16:03:57Z antoine $
 
 PORTNAME=	convey
 PORTVERSION=	0.3
@@ -11,8 +11,6 @@ DISTNAME=	${PORTNAME}-src-${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Instant Message (IM) program using the Jabber protocol
-
-RUN_DEPENDS=	java:${PORTSDIR}/java/javavmwrapper
 
 USE_ANT=	yes
 USE_JAVA=	yes

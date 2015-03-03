@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale	<nivit@email.it>
-# $FreeBSD: head/textproc/py-enchant/Makefile 367888 2014-09-10 20:50:31Z gerald $
+# $FreeBSD: head/textproc/py-enchant/Makefile 374183 2014-12-07 10:01:36Z mva $
 
 PORTNAME=	enchant
 PORTVERSION=	1.6.5
@@ -14,9 +14,8 @@ COMMENT=	Spellchecking library for Python based on the Enchant library
 
 LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant
 
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 USE_WX=		3.0+
 WX_COMPS=	python:run
 

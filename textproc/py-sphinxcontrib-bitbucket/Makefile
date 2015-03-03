@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/textproc/py-sphinxcontrib-bitbucket/Makefile 357869 2014-06-15 11:53:51Z mva $
+# $FreeBSD: head/textproc/py-sphinxcontrib-bitbucket/Makefile 374183 2014-12-07 10:01:36Z mva $
 
 PORTNAME=	sphinxcontrib-bitbucket
 PORTVERSION=	1.0
@@ -13,8 +13,7 @@ COMMENT=	Sphinx/BitBucket integration
 
 RUN_DEPENDS=	${PKGNAMEPREFIX}sphinx>=1.1.3:${PORTSDIR}/textproc/py-sphinx
 
-USE_PYTHON=		yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_AUTOPLIST=	yes
+USES=		python
+USE_PYTHON=	distutils autoplist
 
 .include <bsd.port.mk>

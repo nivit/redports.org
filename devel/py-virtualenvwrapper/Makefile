@@ -1,8 +1,8 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/devel/py-virtualenvwrapper/Makefile 371280 2014-10-20 16:04:12Z mva $
+# $FreeBSD: head/devel/py-virtualenvwrapper/Makefile 378207 2015-01-31 13:32:06Z nivit $
 
 PORTNAME=	virtualenvwrapper
-PORTVERSION=	4.3.1
+PORTVERSION=	4.3.2
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
