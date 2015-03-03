@@ -1,5 +1,5 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD$
+# $FreeBSD: head/net/py-uritemplate/Makefile 380378 2015-03-03 15:41:26Z nivit $
 
 PORTNAME=	uritemplate
 PORTVERSION=	0.6
