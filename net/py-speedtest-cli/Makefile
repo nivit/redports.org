@@ -2,7 +2,7 @@
 # $FreeBSD: head/net/py-speedtest-cli/Makefile 378205 2015-01-31 12:55:28Z nivit $
 
 PORTNAME=	speedtest-cli
-PORTVERSION=	0.3.1
+PORTVERSION=	0.3.2
 #PORTREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	CHEESESHOP
