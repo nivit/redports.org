@@ -5,11 +5,32 @@ PORTNAME=	variety
 PORTVERSION=	0.5.3
 #PORTREVISION=	0
 CATEGORIES=	graphics
-MASTER_SITES=	https://launchpad.net/variety/trunk/${PORTVERSION}/+download/ 
+MASTER_SITES=	https://launchpad.net/variety/trunk/${PORTVERSION}/+download/ \
 		http://nivit.altervista.org/FreeBSD/ports/distfiles/
 DISTNAME=	variety_${PORTVERSION}
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Wallpaper changer
+
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}distutils-extra>=2.38:${PORTSDIR}/devel/py-distutils-extra
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4.3.2:${PORTSDIR}/www/py-beautifulsoup \
+		${PYTHON_PKGNAMEPREFIX}cairo>=1.10.0:${PORTSDIR}/graphics/py-cairo \
+		${PYTHON_PKGNAMEPREFIX}configobj>=5.0.6:${PORTSDIR}/devel/py-configobj \
+		${PYTHON_PKGNAMEPREFIX}curl>=7.19.5.1:${PORTSDIR}/ftp/py-curl \
+		${PYTHON_PKGNAMEPREFIX}dbus>=1.1.1_1:${PORTSDIR}/devel/py-dbus \
+		${PYTHON_PKGNAMEPREFIX}exiv2>=0.3.2_3:${PORTSDIR}/graphics/py-exiv2 \
+		${PYTHON_PKGNAMEPREFIX}httplib2>=0.9:${PORTSDIR}/www/py-httplib2 \
+		${PYTHON_PKGNAMEPREFIX}imaging>=1.1.7:${PORTSDIR}/graphics/py-imaging \
+		${PYTHON_PKGNAMEPREFIX}lxml>=3.4.1_1:${PORTSDIR}/devel/py-lxml \
+		${PYTHON_PKGNAMEPREFIX}six>=1.8.0:${PORTSDIR}/devel/py-six \
+		ImageMagick>=6.9.0.4,1:${PORTSDIR}/graphics/ImageMagick \
+		bash>=4.3.33:${PORTSDIR}/shells/bash \
+		coreutils>=8.23:${PORTSDIR}/sysutils/coreutils \
+		notify-send:${PORTSDIR}/devel/libnotify:${PORTSDIR}/devel/libnotify \
+		pango>=1.36.8:${PORTSDIR}/x11-toolkits/pango \
+		webkit-gtk3>=2.4.8:${PORTSDIR}/www/webkit-gtk3 \
+		yelp>=3.14.1:${PORTSDIR}/x11/yelp
+
+USES=	python:2 shebangfix
 
 .include <bsd.port.mk>
