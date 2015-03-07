@@ -30,7 +30,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4.3.2:${PORTSDIR}/www/py-beau
 		ca_root_nss>=3.17.4:${PORTSDIR}/security/ca_root_nss \
 		coreutils>=8.23:${PORTSDIR}/sysutils/coreutils \
 		gsettings:${PORTSDIR}/devel/glib20 \
-		notify-send:${PORTSDIR}/devel/libnotify:${PORTSDIR}/devel/libnotify \
+		notify-send:${PORTSDIR}/devel/libnotify \
 		pango>=1.36.8:${PORTSDIR}/x11-toolkits/pango \
 		webkit-gtk3>=2.4.8:${PORTSDIR}/www/webkit-gtk3 \
 		yelp>=3.14.1:${PORTSDIR}/x11/yelp
