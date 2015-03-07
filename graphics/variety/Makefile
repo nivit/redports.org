@@ -14,7 +14,8 @@ COMMENT=	Wallpaper changer
 
 LICENSE=	GPLv3
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}distutils-extra>=2.38:${PORTSDIR}/devel/py-distutils-extra
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}distutils-extra>=2.38:${PORTSDIR}/devel/py-distutils-extra  \
+		intltool-update:${PORTSDIR}/textproc/intltool
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4.3.2:${PORTSDIR}/www/py-beautifulsoup \
 		${PYTHON_PKGNAMEPREFIX}cairo>=1.10.0:${PORTSDIR}/graphics/py-cairo \
 		${PYTHON_PKGNAMEPREFIX}configobj>=5.0.6:${PORTSDIR}/devel/py-configobj \
