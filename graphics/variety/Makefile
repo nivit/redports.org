@@ -46,8 +46,12 @@ WRKSRC=	${WRKDIR}/variety
 
 post-patch:
 	@(cd ${WRKSRC} && ${REINPLACE_CMD} \
-		-e 's,%%LOCALBASE%%,${LOCALBASE},1' \
+		-E -e 's,%%LOCALBASE%%,${LOCALBASE},1' \
 		-e 's,%%PREFIX%%,${PREFIX},1' \
+		-e 's,/usr(/share/backgrounds),${LOCALBASE}\1,1' \
+		data/config/variety.conf po/*.po* \
+		data/ui/PreferencesVarietyDialog.ui \
+		variety/Options.py variety/ThumbsWindow.py \
 		variety/__init__.py variety/VarietyWindow.py)
 
 .include <bsd.port.pre.mk>
