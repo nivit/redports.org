@@ -12,7 +12,6 @@ COMMENT=	Google API Client Library for Python
 
 LICENSE=	APACHE20
 
-BUILD_DEPENDS=	${PKGNAMEPREFIX}oauth2client>=1.3:${PORTSDIR}/security/py-oauth2client
 RUN_DEPENDS=	${PKGNAMEPREFIX}httplib2>=0.6.0:${PORTSDIR}/www/py-httplib2 \
 		${PKGNAMEPREFIX}oauth2client>=1.3:${PORTSDIR}/security/py-oauth2client \
 		${PKGNAMEPREFIX}uritemplate>=0.6:${PORTSDIR}/net/py-uritemplate
@@ -22,6 +21,8 @@ DJANGO_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django>=1.3:${PORTSDIR}/www/py-django
 
 GAE_DESC=	Use the library with Google App Engine
 GAE_RUN_DEPENDS=	google-appengine>=1.4.3:${PORTSDIR}/www/google-appengine
+
+MAKE_ENV=	SKIP_GOOGLEAPICLIENT_COMPAT_CHECK=yes
 
 OPTIONS_DEFINE=	DJANGO GAE WEBTEST
 
