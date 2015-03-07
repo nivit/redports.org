@@ -39,7 +39,7 @@ python_CMD=	${PYTHON_CMD}
 
 SHEBANG_FILES=	bin/variety data/scripts/*
 
-USES=	desktop-file-utils gettext-runtime python:2 shebangfix
+USES=	desktop-file-utils gettext python:2 shebangfix
 USE_PYTHON=	distutils
 
 WRKSRC=	${WRKDIR}/variety
