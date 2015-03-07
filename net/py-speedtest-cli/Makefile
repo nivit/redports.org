@@ -13,7 +13,13 @@ COMMENT=	Command line interface for testing internet bandwidth
 
 LICENSE=	APACHE20
 
+RUN_DEPENDS=	ca_root_nss>=3.17.3:${PORTSDIR}/security/ca_root_nss
+
 USES=		python
 USE_PYTHON=	autoplist distutils
+
+post-patch:
+	        @${REINPLACE_CMD} -e 's,%%LOCALBASE%%,${LOCALBASE},1' \
+			                ${WRKSRC}/speedtest_cli.py
 
 .include <bsd.port.mk>
